@@ -2,11 +2,11 @@
 # Fase de planificación
 [Plan de investigación](https://docs.google.com/document/d/18dmkgkjxvY4lUFXVq2Bpp2sUPAVqTZlLHitHpwO0qps/edit?usp=sharing/)
 
-[Formulario para los tutores]()
+[Formulario para los tutores](https://forms.gle/6rkERFuoZKn2x1Cp7)
 
-[Formulario para el alumnado]()
+[Formulario para el alumnado](https://forms.gle/D2TQ5dYfyTtjJk9H7)
 
-[Formulario para el profesorado específico]()
+[Formulario para el profesorado específico](https://forms.gle/BpQGvdqYw5tT3YAE7)
 
 
 - Especificación y planteamiento del proyecto
