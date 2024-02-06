@@ -1,6 +1,14 @@
 # Proyecto2-Cuatri
 # Fase de planificación
 [Plan de investigación](https://docs.google.com/document/d/18dmkgkjxvY4lUFXVq2Bpp2sUPAVqTZlLHitHpwO0qps/edit?usp=sharing/)
+
+[Formulario para los tutores]()
+
+[Formulario para el alumnado]()
+
+[Formulario para el profesorado específico]()
+
+
 - Especificación y planteamiento del proyecto
 - Anteproyecto del Sitio web
 - Examinando el Sitio web-Pruebas de usabilidad
