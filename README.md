@@ -4,7 +4,7 @@
 
 [Anteprotecto]()
 
-[Evaluación de recursos similares]
+[Evaluación de recursos similares]()
 
 [Formulario para los tutores](https://forms.gle/6rkERFuoZKn2x1Cp7)
 
