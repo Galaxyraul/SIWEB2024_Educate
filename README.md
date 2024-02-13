@@ -1,6 +1,10 @@
-# Proyecto2-Cuatri
+# Educate
 # Fase de planificación
 [Plan de investigación](https://docs.google.com/document/d/18dmkgkjxvY4lUFXVq2Bpp2sUPAVqTZlLHitHpwO0qps/edit?usp=sharing/)
+
+[Anteprotecto]()
+
+[Evaluación de recursos similares]
 
 [Formulario para los tutores](https://forms.gle/6rkERFuoZKn2x1Cp7)
 
