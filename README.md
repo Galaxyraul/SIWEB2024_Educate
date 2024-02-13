@@ -2,7 +2,7 @@
 # Fase de planificación
 [Plan de investigación](https://docs.google.com/document/d/18dmkgkjxvY4lUFXVq2Bpp2sUPAVqTZlLHitHpwO0qps/edit?usp=sharing/)
 
-[Anteprotecto]()
+[Anteproyecto]()
 
 [Evaluación de recursos similares]()
 
