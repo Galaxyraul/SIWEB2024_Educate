@@ -1,8 +1,15 @@
+## Datos del alumno
+### Nombre : Raúl Gómez Téllez
+### Correo : rgt00024@red.ujaen.es
+## Asignaturas para las cuales es el proyecto
+### Sistemas de información basado en web / Lina Guadalupe García Cabrera
+### Sistemas de información para el negocio electrónico / Carlos J. Ogayar Anguita
+### Bases de datos distribuidas / Carmen Martínez Cruz
 # Educate
 # Fase de planificación
 [Plan de investigación](https://docs.google.com/document/d/18dmkgkjxvY4lUFXVq2Bpp2sUPAVqTZlLHitHpwO0qps/edit?usp=sharing/)
 
-[Anteproyecto]()
+[Anteproyecto](https://docs.google.com/document/d/1evi3MdQA4qhZKojl-VR4LzMeQ9I7T7qBFUSBbs-v6-M/edit?usp=drive_link)
 
 [Evaluación de recursos similares]()
 
