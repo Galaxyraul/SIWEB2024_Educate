@@ -5,8 +5,9 @@
 ### Sistemas de información basado en web / Lina Guadalupe García Cabrera
 ### Sistemas de información para el negocio electrónico / Carlos J. Ogayar Anguita
 ### Bases de datos distribuidas / Carmen Martínez Cruz
-# Educate
-# Fase de planificación
+# Proyecto
+## Título:Educate
+## Fase de planificación
 [Plan de investigación](https://docs.google.com/document/d/18dmkgkjxvY4lUFXVq2Bpp2sUPAVqTZlLHitHpwO0qps/edit?usp=sharing/)
 
 [Anteproyecto](https://docs.google.com/document/d/1evi3MdQA4qhZKojl-VR4LzMeQ9I7T7qBFUSBbs-v6-M/edit?usp=drive_link)
@@ -23,7 +24,7 @@
 - Especificación y planteamiento del proyecto
 - Anteproyecto del Sitio web
 - Examinando el Sitio web-Pruebas de usabilidad
-# Fase de diseño
+## Fase de diseño
 - Contexto (esta información sería una definición más concreta del proyecto de acuerdo a las conclusiones obtenidas en toda la fase de recogida de información y análisis de la fase de planificación).
 - AI Personas (Arquetipos de usuario, investigación sobre personas si es necesario entrevistas a expertos)
 - AI Contenidos: Qué contenido hay, qué contenido se necesita.
@@ -47,7 +48,7 @@
   - Prototipos de baja o alta fidelidad de los distintos tipos de página
 - Diseño Visual (requisitos, criterios relacionados con aspecto visual, elementos de interacción)
 
-# Fase de Implementación
+## Fase de Implementación
 - Tecnologías y herramientas a utilizar
 - Estrategia en el desarrollo de la implementación
 - Desarrollo de la primera versión
