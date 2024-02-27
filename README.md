@@ -12,7 +12,7 @@
 
 [Anteproyecto](https://docs.google.com/document/d/1evi3MdQA4qhZKojl-VR4LzMeQ9I7T7qBFUSBbs-v6-M/edit?usp=drive_link)
 
-[Evaluación de recursos similares]()
+[Evaluación de recursos similares](https://docs.google.com/document/d/1Qe6q_P3ZMwoKEmENkZJvrB2uYlSfNzz_wj4RX3QwDj0/edit?usp=sharing)
 
 [Formulario para los tutores](https://forms.gle/6rkERFuoZKn2x1Cp7)
 
