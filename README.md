@@ -15,21 +15,24 @@ Por ello, este proyecto propone una nueva herramienta para facilitar el aprendiz
 ## Fase de planificación
 [Plan de investigación](https://docs.google.com/document/d/18dmkgkjxvY4lUFXVq2Bpp2sUPAVqTZlLHitHpwO0qps/edit?usp=sharing/)
 
+- [Formulario para los tutores](https://forms.gle/6rkERFuoZKn2x1Cp7)
+
+- [Formulario para el alumnado](https://forms.gle/D2TQ5dYfyTtjJk9H7)
+
+- [Formulario para el profesorado específico](https://forms.gle/BpQGvdqYw5tT3YAE7)
+
 [Anteproyecto](https://docs.google.com/document/d/1evi3MdQA4qhZKojl-VR4LzMeQ9I7T7qBFUSBbs-v6-M/edit?usp=drive_link)
 
 [Evaluación de recursos similares](https://docs.google.com/document/d/1Qe6q_P3ZMwoKEmENkZJvrB2uYlSfNzz_wj4RX3QwDj0/edit?usp=sharing)
 
-[Formulario para los tutores](https://forms.gle/6rkERFuoZKn2x1Cp7)
-
-[Formulario para el alumnado](https://forms.gle/D2TQ5dYfyTtjJk9H7)
-
-[Formulario para el profesorado específico](https://forms.gle/BpQGvdqYw5tT3YAE7)
-
-
-- Especificación y planteamiento del proyecto
-- Anteproyecto del Sitio web
-- Examinando el Sitio web-Pruebas de usabilidad
 ## Fase de diseño
+
+[Documento Contexto](https://docs.google.com/document/d/10oLszUQ0oKurzsfrH7BLhtwNuWotEwikMavH4l4e0mA/edit?usp=sharing)
+
+[Documento Usuario](https://docs.google.com/document/d/1IAnisRlM1djVIxDPTScOxRsMrXndP8QaIel1ry-nI0A/edit?usp=sharing)
+
+[Documento Contenido](https://docs.google.com/document/d/1UV8JGMFoW1G55uuYUK2NgMUBsQX3uqivG4mUiQe4Ql8/edit?usp=sharing)
+
 - Contexto (esta información sería una definición más concreta del proyecto de acuerdo a las conclusiones obtenidas en toda la fase de recogida de información y análisis de la fase de planificación).
 - AI Personas (Arquetipos de usuario, investigación sobre personas si es necesario entrevistas a expertos)
 - AI Contenidos: Qué contenido hay, qué contenido se necesita.
