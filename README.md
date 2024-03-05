@@ -7,6 +7,7 @@
 ### Bases de datos distribuidas / Carmen Martínez Cruz
 # Proyecto
 ## Título:Educate
+>[!NOTE] Un par de párrafos de introducción del sitio web, con la motivación principal del proyecto.
 ## Fase de planificación
 [Plan de investigación](https://docs.google.com/document/d/18dmkgkjxvY4lUFXVq2Bpp2sUPAVqTZlLHitHpwO0qps/edit?usp=sharing/)
 
