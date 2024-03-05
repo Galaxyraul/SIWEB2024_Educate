@@ -7,7 +7,11 @@
 ### Bases de datos distribuidas / Carmen Martínez Cruz
 # Proyecto
 ## Título:Educate
->[!NOTE] Un par de párrafos de introducción del sitio web, con la motivación principal del proyecto.
+## Que nos motiva
+
+La principal motivación de este proyecto es la preocupantemente alta tasa de abandono escolar entre nuestros jóvenes, así como los malos resultados obtenidos en informes internacionales como los PISA.
+
+Por ello, este proyecto propone una nueva herramienta para facilitar el aprendizaje del alumnado, así como la creación de una comunidad en torno al ámbito educativo donde los jóvenes se ayudan entre ellos y reinventan el concepto de aprendizaje.
 ## Fase de planificación
 [Plan de investigación](https://docs.google.com/document/d/18dmkgkjxvY4lUFXVq2Bpp2sUPAVqTZlLHitHpwO0qps/edit?usp=sharing/)
 
