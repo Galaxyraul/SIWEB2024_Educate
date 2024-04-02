@@ -27,16 +27,13 @@ Por ello, este proyecto propone una nueva herramienta para facilitar el aprendiz
 
 ## Fase de diseño
 
-[Documento Contexto](https://docs.google.com/document/d/10oLszUQ0oKurzsfrH7BLhtwNuWotEwikMavH4l4e0mA/edit?usp=sharing)
+[Contexto](https://docs.google.com/document/d/10oLszUQ0oKurzsfrH7BLhtwNuWotEwikMavH4l4e0mA/edit?usp=sharing)
 
-[Documento Usuario](https://docs.google.com/document/d/1IAnisRlM1djVIxDPTScOxRsMrXndP8QaIel1ry-nI0A/edit?usp=sharing)
+[Personas](https://docs.google.com/document/d/1IAnisRlM1djVIxDPTScOxRsMrXndP8QaIel1ry-nI0A/edit?usp=sharing)
 
-[Documento Contenido](https://docs.google.com/document/d/1UV8JGMFoW1G55uuYUK2NgMUBsQX3uqivG4mUiQe4Ql8/edit?usp=sharing)
+[Contenido](https://docs.google.com/document/d/1UV8JGMFoW1G55uuYUK2NgMUBsQX3uqivG4mUiQe4Ql8/edit?usp=sharing)
 
-- Contexto (esta información sería una definición más concreta del proyecto de acuerdo a las conclusiones obtenidas en toda la fase de recogida de información y análisis de la fase de planificación).
-- AI Personas (Arquetipos de usuario, investigación sobre personas si es necesario entrevistas a expertos)
 - AI Contenidos: Qué contenido hay, qué contenido se necesita.
-  - Card Sorting (la investigación previa de la planificación y el estudio de las personas/contenido te deben proporcionar los conceptos, etiquetas...)
   - Tipos de contenido (distinguir entre estáticos y dinámicos, estructurados o no)
   - Clasificación y prioridades 
   - Sistemas de clasificación 
@@ -45,16 +42,7 @@ Por ello, este proyecto propone una nueva herramienta para facilitar el aprendiz
   - Etiquetas y lenguaje
   - Patrones de diseño
   - Mapa conceptual del sitio web
-- Diseño de la Navegación
-  - Tipos de Navegación
-  - Páginas de Contenido
-  - Páginas índice
-  - Página principal o inicio
-  - Ayudas de Navegación
-  - Tipos de página
-    - sketchs y wireframes
-  - Prototipos de baja o alta fidelidad de los distintos tipos de página
-- Diseño Visual (requisitos, criterios relacionados con aspecto visual, elementos de interacción)
+[Navegación](https://docs.google.com/document/d/1Hw9jLCTl8dZxZpJHpPd7AEnM6j7STfRNazInh7Hnp3E/edit?usp=sharing)
 
 ## Fase de Implementación
 - Tecnologías y herramientas a utilizar
