@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="content.css">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Tabs Container</title>
+    <link rel="stylesheet" href="tabs.css">
+</head>
+<body>
+    <div class="tabs-container">
+        <div class="tabs">
+            <button class="tablinks" onclick="openTab(event, 'TextImages')">Text & Images</button>
+            <button class="tablinks" onclick="openTab(event, 'Videos')">Videos</button>
+            <button class="tablinks" onclick="openTab(event, 'PDFs')">PDFs</button>
+        </div>
+
+        <!-- Tab content -->
+        <div id="TextImages" class="tabcontent">
+            <h3>Text & Images</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac lacus et leo commodo pellentesque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;</p>
+            <img src="image1.jpg" alt="Image 1">
+            <img src="image2.jpg" alt="Image 2">
+        </div>
+
+        <div id="Videos" class="tabcontent">
+            <h3>Videos</h3>
+            <div class="video-item">
+                <h4>Video 1</h4>
+                <video controls>
+                    <source src="video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Description for Video 1</p>
+            </div>
+            <div class="video-item">
+                <h4>Video 2</h4>
+                <video controls>
+                    <source src="video2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Description for Video 2</p>
+            </div>
+        </div>
+
+        <div id="PDFs" class="tabcontent">
+            <h3>PDFs</h3>
+            <a href="document1.pdf" download>Download PDF 1</a>
+            <a href="document2.pdf" download>Download PDF 2</a>
+        </div>
+    </div>
+
+    <script src="content.js"></script
+
+</body>
+</html>

@@ -76,47 +76,33 @@ hidden.addEventListener("mouseleave", () => {
 idiomaDrop.addEventListener("mouseenter",()=>{
     console.log("Entramos en el desplagable");
     ct_idiomaDrop.style.display = "block";
-})
+});
 
 idiomaDrop.addEventListener("mouseleave",()=>{
-    console.log("Entramos en el desplagable");
+    console.log("Salimos del desplagable");
     ct_idiomaDrop.style.display = "none";
-})
+});
 
 perfilDrop.addEventListener("mouseenter",()=>{
     console.log("Entramos en el desplagable");
     ct_perfilDrop.style.display = "block";
-})
+});
 
 perfilDrop.addEventListener("mouseleave",()=>{
-    console.log("Entramos en el desplagable");
+    console.log("Salimos del desplagable");
     ct_perfilDrop.style.display = "none";
-})
+});
 
-const displayChat = document.getElementById("display_chat");
-const chat = document.getElementById("chat");
-const chat_bar_buttons = document.getElementsByClassName("chat_bar_button");
-const chat_bar = document.getElementById("chat_bar");
-let displayed = false;
+document.addEventListener("DOMContentLoaded", function() {
+    const dropdownButton = document.getElementById("dropdownButton");
+    const dropdownContent = document.getElementById("dropdownContent");
 
-displayChat.addEventListener("click", function() {
-    displayed = !displayed;
-    if (displayed) {
-        chat.style.width = "30dvw";
-        chat.style.border = "solid 3px black"
-        chat_bar.style.border = "solid 3px black"
-        displayChat.textContent = "<";
-        Array.from(chat_bar_buttons).forEach(button => {
-            button.style.display = "block"
-        });
-        
-    } else {
-        chat.style.width = "0dvw";
-        chat.style.border = "0"
-        chat_bar.style.border = "0"
-        displayChat.textContent = ">";
-        Array.from(chat_bar_buttons).forEach(button => {
-            button.style.display = "none"
-        });
-    }
+    dropdownContent.addEventListener("click", function(event) {
+        if(event.target.tagName === "A") {
+            const selectedLang = event.target.getAttribute("data-lang");
+            // Handle language change (e.g., set cookie, update UI language)
+            console.log(`Selected language: ${selectedLang}`);
+            dropdownButton.textContent = event.target.textContent;
+        }
+    });
 });
