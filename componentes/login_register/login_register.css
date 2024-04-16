@@ -61,7 +61,6 @@ main {
     height: 0;
     opacity: 0;
     visibility: hidden;
-    overflow: hidden;
     transition: height 1.5s ease, opacity 1.5s ease;
 }
 

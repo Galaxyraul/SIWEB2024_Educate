@@ -3,41 +3,47 @@ const toggle = document.getElementById("toggle");
 const sun = document.querySelector(".fa-sun");
 const moon = document.querySelector(".fa-moon");
 const droppable = document.getElementById("categorias");
-const hidden = document.getElementById("content")
-const perfilDrop = document.getElementById("perfil")
-const idiomaDrop = document.getElementById("idioma")
-const ct_perfilDrop = document.getElementById("ct_perfil")
-const ct_idiomaDrop = document.getElementById("ct_idioma")
+const hidden = document.getElementById("content");
+const perfilDrop = document.getElementById("perfil");
+const idiomaDrop = document.getElementById("idioma");
+const ct_perfilDrop = document.getElementById("perfilContent");
+const ct_idiomaDrop = document.getElementById("ct_idioma");
+const perfilButton = document.getElementById("perfilButton");
+const loginModal = document.getElementById("loginModal");
+const closeBtn = document.querySelector(".close-btn");
+const loginBtn = document.getElementById("loginBtn");
+const registerBtn = document.getElementById("registerBtn");
+
 let logged = false;
 let left = true;
 let startTime;
 let start;
 let iniSlider = "#808080";
 let objectiveSlider = "#555353";
-let iniSun = "#ffd700"
-let objectiveSun = "#000000"
-let iniMoon = "#000000"
-let objectiveMoon = "#ffffff"
+let iniSun = "#ffd700";
+let objectiveSun = "#000000";
+let iniMoon = "#000000";
+let objectiveMoon = "#ffffff";
 
 function slide() {
     const elapsed = Date.now() - start;
     const duration = 500; // 0.5 seconds
-    const progress = Math.min(elapsed / duration, 1); // Ensure progress doesn"t exceed 1
+    const progress = Math.min(elapsed / duration, 1);
     const translation = left ? (progress * 200) + "%" : (200 - (progress * 200)) + "%";
     slider.style.transform = "translateX(" + translation + ")";
     const sunColor = interpolateColor(iniSun, objectiveSun, progress);
     const moonColor = interpolateColor(iniMoon, objectiveMoon, progress);
     const toggleColor = interpolateColor(iniSlider, objectiveSlider, progress);
     const sliderColor = interpolateColor(objectiveSlider, iniSlider, progress);
-    toggle.style.backgroundColor = toggleColor
-    slider.style.backgroundColor = sliderColor
+    toggle.style.backgroundColor = toggleColor;
+    slider.style.backgroundColor = sliderColor;
     sun.style.color = sunColor;
     moon.style.color = moonColor;
     if (progress < 1) {
         requestAnimationFrame(slide);
     } else {
         left = !left;
-        [iniSun,iniMoon,iniSlider,objectiveSun,objectiveMoon,objectiveSlider] = [objectiveSun,objectiveMoon,objectiveSlider,iniSun,iniMoon,iniSlider]
+        [iniSun, iniMoon, iniSlider, objectiveSun, objectiveMoon, objectiveSlider] = [objectiveSun, objectiveMoon, objectiveSlider, iniSun, iniMoon, iniSlider];
     }
 }
 
@@ -62,35 +68,52 @@ toggle.addEventListener("click", function() {
     }
 });
 
-droppable.addEventListener("mouseenter",()=>{
+droppable.addEventListener("mouseenter", () => {
     console.log("Entramos en el desplagable");
     hidden.style.display = "block";
-})
-
+});
 
 hidden.addEventListener("mouseleave", () => {
     console.log("Salimos en el desplagable");
-        hidden.style.display = "none";
-}); 
+    hidden.style.display = "none";
+});
 
-idiomaDrop.addEventListener("mouseenter",()=>{
+idiomaDrop.addEventListener("mouseenter", () => {
     console.log("Entramos en el desplagable");
     ct_idiomaDrop.style.display = "block";
 });
 
-idiomaDrop.addEventListener("mouseleave",()=>{
-    console.log("Salimos del desplagable");
-    ct_idiomaDrop.style.display = "none";
+perfilDrop.addEventListener("mouseenter", () => {
+    console.log("Seleccionado el perfil");
+    if (logged) {
+        ct_perfilDrop.style.display = "block";
+    } else {
+        ct_perfilDrop.style.display = "none";
+    }
 });
 
-perfilDrop.addEventListener("mouseenter",()=>{
-    console.log("Entramos en el desplagable");
-    ct_perfilDrop.style.display = "block";
-});
-
-perfilDrop.addEventListener("mouseleave",()=>{
-    console.log("Salimos del desplagable");
+perfilDrop.addEventListener("mouseleave", () => {
     ct_perfilDrop.style.display = "none";
+});
+
+perfilButton.addEventListener("click", function() {
+    if (!logged) {
+        loginModal.style.display = "block";
+    } else {
+        ct_perfilDrop.style.display = "block";
+    }
+});
+
+closeBtn.addEventListener("click", function() {
+    loginModal.style.display = "none";
+});
+
+loginBtn.addEventListener("click", function() {
+    console.log("Acceder clicked");
+});
+
+registerBtn.addEventListener("click", function() {
+    console.log("Registrarse clicked");
 });
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -98,9 +121,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const dropdownContent = document.getElementById("dropdownContent");
 
     dropdownContent.addEventListener("click", function(event) {
-        if(event.target.tagName === "A") {
+        if (event.target.tagName === "A") {
             const selectedLang = event.target.getAttribute("data-lang");
-            // Handle language change (e.g., set cookie, update UI language)
             console.log(`Selected language: ${selectedLang}`);
             dropdownButton.textContent = event.target.textContent;
         }

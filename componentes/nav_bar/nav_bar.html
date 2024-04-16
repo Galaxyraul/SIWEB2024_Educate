@@ -30,9 +30,7 @@
             </li>
             <li id = "idioma">
                 <div class="dropdown" id="idiomaDropdown">
-                    <button class="dropdown-toggle" id="idiomaButton">
-                        Idioma
-                    </button>
+                    <h2 class="dropdown-toggle" id="idiomaButton"> Idioma </h2> 
                     <div class="dropdown-content" id="idiomaContent">
                         <a href="#" data-lang="en">
                             <img src="path/to/english-flag.png" alt="English Flag" class="flag-icon"> English
@@ -48,27 +46,19 @@
                 </div>
             </div></li>
             <li id = "perfil" class="tag">
-                <div class="dropdown" id="idiomaDropdown">
-                    <button class="dropdown-toggle" id="idiomaButton">
-                        Perfil
-                    </button>
-                    <div class="dropdown-content" id="perfilContent">
-                        <a href="#" data-lang="en">
-                            <img src="path/to/english-flag.png" alt="English Flag" class="flag-icon"> English
-                        </a>
-                        <a href="#" data-lang="es">
-                            <img src="path/to/spanish-flag.png" alt="Spanish Flag" class="flag-icon"> Español
-                        </a>
-                        <a href="#" data-lang="fr">
-                            <img src="path/to/french-flag.png" alt="French Flag" class="flag-icon"> Français
-                        </a>
-                        <!-- Add more languages as needed -->
-                    </div>
+                <div class="dropdown" id="perfilDropdown">
+                    <h2 class="dropdown-toggle" id="perfilButton"> Perfil </h2>
                 </div>
             </div></li>
         </ul>
     </nav>
     <div id ="content" class = "content">Content to reveal</div>
+     <!-- Login/Register Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+        </div>
+    </div>
     <script src = "nav_bar.js"></script>
     </header>
 </body>

@@ -14,7 +14,6 @@ register.addEventListener("click", function() {
 function setActive(activeTab, inactiveTab, activeForm, inactiveForm) {
     activeTab.classList.add("active");
     inactiveTab.classList.remove("active");
-    
     activeForm.classList.add("active-form");
     inactiveForm.classList.remove("active-form");
 }

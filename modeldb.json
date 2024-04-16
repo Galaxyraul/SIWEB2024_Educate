@@ -1,0 +1,26 @@
+{
+    "user":{
+        "id":,
+        "nick":,
+        "password":,
+        "role":,
+        "read_lectures":[],
+        "reviewed_lectures":[],
+        "created_lectures"
+    },
+    
+    "lecture":{
+        "id":,
+        "reference":,
+        "categories":[],
+        "creator":,
+        "reviewer":,
+        "review_date":,
+        "times_read":
+    },
+    "category":{
+        "name":,
+        "parent_catgory":,
+        "lectures":[]
+    }
+}
