@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+body{
+    min-height: 100dvh;
+}
+
+#nav_bar{
+    background-color: #333;
+    padding: 1%;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#nav_bar ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+#nav_bar ul.left {
+    min-width: 30vw;
+  }
+  
+#nav_bar ul.right {
+    min-width: 30vw;
+    justify-content: space-evenly;
+}
+
+#nav_bar a{
+    margin: 2dvw;
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+#nav_bar a:hover {
+    color: #ffd700;
+}
+
+#searchbar{
+    min-width:15dvw;
+    padding:10px;
+    background-color: #555;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#searchbar::placeholder{
+    color: inherit;
+    opacity: 0.5;
+}
+
+#search_button{
+    padding:10px;
+    background-color: #555;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#search_button:hover,
+.chat_bar_button:hover {
+    background-color: #777;
+}
+
+#idioma,
+#perfil {
+    position: relative; /* Make these relative to position their children */
+    cursor: pointer;
+}
+
+#ct_idioma,
+#ct_perfil {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position below the parent */
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure dropdown is above other content */
+    min-width: 200px; /* Adjust width as needed */
+}
+
+#ct_idioma a,
+#ct_perfil a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+#ct_idioma a:hover,
+#ct_perfil a:hover {
+    background-color: #f4f4f4;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+}
+
+.slider {
+    min-width: 5dvw;
+    padding: 5%;
+    background-color: gray;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+.slider:hover {
+    background-color: #777;
+}
+.slider input {
+    display: none;
+}
+
+.slider-toggle {
+    width: 1.5dvw;
+    height: 1.5dvw;
+    background-color: #555353; 
+    border-radius: 50%;
+    border: 1px solid black;
+    box-shadow: inset 0 10px 10px -10px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+i.fa-sun {
+    position: absolute;
+    margin: 0.3dvw;
+    color: #ffd700; 
+    transition: color 0.3s ease;
+}
+
+i.fa-moon {
+    position: relative;
+    margin: 0.3dvw;
+    color: black; 
+    transition: color 0.3s ease;
+}
+
+.content{
+    min-width: 100vw;
+    display: none;
+    padding: 2%;
+    position: absolute;
+    color: black;
+    background-color: #eee;
+    min-height: 1vh;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Dropdown Button */
+.dropdown-toggle {
+    padding: 10px 20px;
+    background-color: #333;
+    color: inherit;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    color: black;
+}
+
+.dropdown-content a { 
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show the dropdown when the button is hovered */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Flag Icon */
+.flag-icon {
+    width: 24px;
+    height: 16px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 2000;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
