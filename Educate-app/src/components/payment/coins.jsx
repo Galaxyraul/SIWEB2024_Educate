@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/coins.css'; // Import your modal styles
+import '../../styles/coins.css'; // Import your modal styles
 
 const Modal = ({ isOpen, onClose, children }) => {
     if (!isOpen) {

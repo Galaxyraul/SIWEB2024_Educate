@@ -23,14 +23,7 @@ body{
     align-items: center;
 }
 
-#nav_bar ul.left {
-    min-width: 30vw;
-  }
-  
-#nav_bar ul.right {
-    min-width: 30vw;
-    justify-content: space-evenly;
-}
+
 
 #nav_bar a{
     margin: 2dvw;

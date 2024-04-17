@@ -1,8 +1,8 @@
 import React from 'react';
-import ChatContainer from './components/chat';
+import NavBar from './components/nav_bar/nav_bar';
 function App() {
     return (
-        <ChatContainer/>
+        <NavBar/>
     );
 }
 

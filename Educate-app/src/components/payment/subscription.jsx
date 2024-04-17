@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/coins.css';
+import '../../styles/coins.css';
 
 const Subscribe = () => {
     const openPaymentTab = (optionName, price) => {
