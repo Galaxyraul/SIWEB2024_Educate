@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Ledger</title>
+    <link rel="stylesheet" href="ledger.css">
+</head>
+<body>
+    <!-- Ledger Section -->
+    <div class="ledger-container">
+        <h2>Your Ledger</h2>
+        <div class="ledger-content">
+            <div class="subscription-status">
+                <h3>Subscription Status</h3>
+                <p>Active - Premium Plan</p>
+                <button onclick="renewSubscription()">Renew Subscription</button>
+                <button id="autoPayBtn" onclick="toggleAutoPay()">Enable AutoPay</button>
+            </div>
+            
+            <div class="coin-balance">
+                <h3>Coin Balance</h3>
+                <p>1000 Coins</p>
+                <button onclick="addCoins()">Add Coins</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="ledger.js"></script>
+</body>
+</html>

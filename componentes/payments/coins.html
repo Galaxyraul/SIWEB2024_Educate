@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Coins</title>
+    <link rel="stylesheet" href="coins.css">
+</head>
+<body>
+    <!-- Buy Coins Section -->
+    <div class="coins-container">
+        <h1>Buy Coins</h1>
+        <div id="purchaseOptions" class="cards-container">
+            <div class="card" onclick="openPaymentTab('100 Coins', 10)">
+                <img src="coin-icon.png" alt="100 Coins">
+                <h3>100 Coins</h3>
+                <p>$10</p>
+                <button>Buy Now</button>
+            </div>
+
+            <div class="card" onclick="openPaymentTab('500 Coins', 40)">
+                <img src="coin-icon.png" alt="500 Coins">
+                <h3>500 Coins</h3>
+                <p>$40</p>
+                <button>Buy Now</button>
+            </div>
+
+            <div class="card" onclick="openPaymentTab('1000 Coins', 75)">
+                <img src="coin-icon.png" alt="1000 Coins">
+                <h3>1000 Coins</h3>
+                <p>$75</p>
+                <button>Buy Now</button>
+            </div>
+
+            <div class="card" id="videoCard">
+                <img src="video-icon.png" alt="Video Option">
+                <h3>Video Option</h3>
+                <p>Watch a video ad to claim coins</p>
+                <button onclick="openVideoModal()">Watch Video</button>
+            </div>
+        </div>
+
+        <div id="videoModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeVideoModal()">&times;</span>
+                <p>Simulated video ad here...</p>
+                <button id="claimCoinsBtn" style="display: none;" onclick="claimCoins()">Claim Coins</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Subscribe Section -->
+    <div class="subscribe-container">
+        <h2>Subscribe</h2>
+        <div id="subscriptionOptions" class="cards-container">
+            <div class="card" id="subscriptionCard1">
+                <img src="subscription-icon1.png" alt="Subscription Option 1">
+                <h3>Basic Plan</h3>
+                <p>$10/month</p>
+                <button onclick="openPaymentTab('Basic Plan', 10)">Subscribe Now</button>
+            </div>
+
+            <div class="card" id="subscriptionCard2">
+                <img src="subscription-icon2.png" alt="Subscription Option 2">
+                <h3>Standard Plan</h3>
+                <p>$20/month</p>
+                <button onclick="openPaymentTab('Standard Plan', 20)">Subscribe Now</button>
+            </div>
+
+            <div class="card" id="subscriptionCard3">
+                <img src="subscription-icon3.png" alt="Subscription Option 3">
+                <h3>Premium Plan</h3>
+                <p>$30/month</p>
+                <button onclick="openPaymentTab('Premium Plan', 30)">Subscribe Now</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="coins.js"></script>
+</body>
+</html>
