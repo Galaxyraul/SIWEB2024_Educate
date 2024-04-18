@@ -35,6 +35,7 @@
 .close-btn:hover {
     color: #333; /* Darken the color on hover */
 }
+
 .right{
     display: flex;
     justify-content: right;

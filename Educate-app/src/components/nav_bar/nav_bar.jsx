@@ -5,7 +5,8 @@ import LanguageDropdown from './language/language';
 import HeadingBanner from './banner/banner';
 import Modal from './modal/modal';
 import Categories from './categories/categories';
-import '../../styles/nav_bar.css';
+import './styles.css';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
     const categories = [
@@ -60,20 +61,21 @@ const NavBar = () => {
                 />
                 <nav id="nav_bar">
                     <ul className="left">
-                        <li><h2><a href="index.html">logo</a></h2></li>
+                        <li><a href="index.html">logo</a></li>
                         <li>
-                            <h2 
-                                onMouseEnter={handleMouseEnter} 
-                                onMouseLeave={handleMouseLeave}
-                            >
-                                Click me
-                            </h2>
+                            <Link to="/categories" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Categorias</Link>  
                         </li>
+                        <li><h2>Crear</h2></li>
+                        <li><h2>Revisar</h2></li>
                     </ul>
                     <SearchBar />
-                    <Slider />
-                    <LanguageDropdown />
-                    <h2 id="profile" onClick={openModal}>Perfil</h2>
+                    <ul className = "right">
+                    <Link to="/payments">monedas</Link>
+                        <Slider />
+                        <LanguageDropdown />
+                        <h2 id="profile" onClick={openModal}>Perfil</h2>
+                    </ul>
+                    
                 </nav>
             </header>
             <Modal isOpen={isModalOpen} onClose={closeModal} />

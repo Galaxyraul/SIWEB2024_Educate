@@ -1,42 +1,29 @@
-import React from 'react';
-import '../styles/review.css'; // Import your review styles
+// ReviewDocument.jsx
+import React, { useState } from 'react';
 
-const ReviewDocument = ({ fileType, fileUrl }) => {
+const ReviewDocument = ({ selectedMail, removeMail }) => {
+    const [isVisible, setIsVisible] = useState(false);
 
     const acceptDocument = () => {
         alert('Document accepted!');
+        removeMail(); // Remove the selected mail from the mailbox
     };
 
     const refuseDocument = () => {
         alert('Document refused!');
-    };
-
-    const renderFile = () => {
-        if (!fileType || !fileUrl) {
-            return <div>No document selected.</div>;
-        }
-
-        switch (fileType) {
-            case 'pdf':
-                return <iframe src={fileUrl} title="Document Preview" width="100%" height="600px"></iframe>;
-            case 'image':
-                return <img src={fileUrl} alt="Document Preview" style={{ width: '100%', maxHeight: '600px' }} />;
-            case 'text':
-                return <object data={fileUrl} type="text/plain" width="100%" height="600px" aria-label="Document Preview"></object>;
-            default:
-                return <div>File type not supported.</div>;
-        }
+        removeMail(); // Remove the selected mail from the mailbox
     };
 
     return (
         <div className="review-container">
             <h2>Review Document</h2>
-            
-            <div className="document-preview">
-                {renderFile()}
-            </div>
-            
-            <div className="review-actions">
+            <iframe 
+                srcDoc={selectedMail ? selectedMail.content : ''}
+                title="Document Preview"
+                style={{ display: isVisible ? 'block' : 'none' }}
+                onLoad={() => setIsVisible(true)}
+            ></iframe>
+            <div className="review-actions" style={{ display: isVisible ? 'block' : 'none' }}>
                 <button onClick={acceptDocument}>Accept</button>
                 <button onClick={refuseDocument}>Refuse</button>
             </div>
