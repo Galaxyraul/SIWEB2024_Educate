@@ -1,0 +1,24 @@
+.heading-banner {
+    padding: 1%;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    box-shadow: inset 0px 10px 20px rgba(255, 255, 255, 0.3);
+}
+
+.heading {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.5em;
+}

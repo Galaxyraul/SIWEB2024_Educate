@@ -4,5 +4,9 @@
   },
   "scripts": {
     "start": "concurrently \"cd client && npm run dev\" \"cd server && node index.js\""
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "mysql2": "^3.9.7"
   }
 }
