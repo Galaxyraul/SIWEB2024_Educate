@@ -1,0 +1,22 @@
+/* styles.css */
+.payments-container {
+    margin: 5dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.coins, .subscriciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.payments-container h2{
+    margin-top: 10px;
+}
+.coin-card, .subscription-card {
+    flex: 0 0 25%; /* This will make 4 items per row */
+    max-width: 25%; /* This will make 4 items per row */
+    box-sizing: border-box;
+    padding: 10px;
+}

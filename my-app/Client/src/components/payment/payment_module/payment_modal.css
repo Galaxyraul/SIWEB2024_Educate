@@ -1,0 +1,86 @@
+
+
+.modal {
+    background-color: #fff;
+    margin: 50px auto;
+    padding: 20px;
+    width: 300px;
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    color:black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.modal-button {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.modal-input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+.modal-title {
+    margin-top:20px;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.payment-methods {
+    padding: 4%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.payment-details {
+    margin-bottom: 20px;
+}
+
+.payment-method{
+    cursor: pointer;
+    padding: 4%;
+    border-radius: 20px;
+}
+.payment-method.selected {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.close-button {
+    position: absolute;
+    background: none;
+    color: black;
+    right: 10px;
+    top: 10px;
+}
+.close-button:hover {
+    color: red;
+}
+.payment-option-background {
+    background-color: #cbc8c8;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}

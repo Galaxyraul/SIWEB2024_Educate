@@ -10,6 +10,7 @@ import Create from './components/creator/create';
 function App() {
     const [user, setUser] = useState({
         logged: false,
+        balance:0,
         login: function() {
             this.logged = true;
         },

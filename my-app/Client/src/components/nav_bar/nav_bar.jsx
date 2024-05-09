@@ -70,7 +70,7 @@ const NavBar = ({user}) => {
                     </ul>
                     <SearchBar />
                     <ul className = "right">
-                    <Link to="/payments">monedas</Link>
+                    <Link to="/payments">{user.balance} coins</Link>
                         <Slider />
                         <LanguageDropdown />
                         {user.logged ? (
