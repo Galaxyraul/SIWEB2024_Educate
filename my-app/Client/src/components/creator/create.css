@@ -1,0 +1,28 @@
+.create-container button{
+    margin-top: 20px;
+    height: 40px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    
+}
+.tab-buttons{
+    display: flex;
+    margin-top: 20px;
+    width: 12dvw;
+}
+.set-up{
+    display: flex;
+    flex-direction: column;
+    width: 12dvw;
+    padding: 1%;
+    background: white;
+    border-radius: 10px;
+    margin-right: 2vw;
+}
+
+.create-container .selected-button {
+    background-color: red; /* Change this to the color you want for the selected state */
+}

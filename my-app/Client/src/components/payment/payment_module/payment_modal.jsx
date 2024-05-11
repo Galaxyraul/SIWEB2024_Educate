@@ -38,6 +38,7 @@ class PaymentOptionsModal extends React.Component {
             console.log(`Payment made with PayPal account: ${this.state.paypalEmail}`);
         }
         this.closeModal();
+        this.props.onPayment();
     }
 
     selectPaymentMethod = (method) => {
@@ -47,6 +48,7 @@ class PaymentOptionsModal extends React.Component {
 
 
 render() {
+    const { user, object } = this.props;
     return (
         <div>
             <button className="modal-button" onClick={this.openModal}>Buy Now</button>
@@ -75,7 +77,7 @@ render() {
                         </div>
                     )}
                 </div>
-                <button className="modal-button" onClick={this.handlePayment}>Pagar:{this.props.price}€</button>
+                <button className="modal-button" onClick={this.handlePayment}>Pagar:{this.props.object.price}€</button>
             </Modal>
         </div>
     );

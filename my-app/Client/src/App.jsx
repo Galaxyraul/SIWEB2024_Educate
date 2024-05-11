@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import PaymentsPage from './components/payment/payment_page';
-import Landing from './components/nav_bar/landing/landing';
+import Landing from './components/landing/landing';
 import Categories_page from './components/categories_page';
 import ReviewPage from './components/review_page';
 import NavBar from './components/nav_bar/nav_bar';
@@ -11,11 +11,17 @@ function App() {
     const [user, setUser] = useState({
         logged: false,
         balance:0,
+        mail:"prueba@gmail.com",
         login: function() {
             this.logged = true;
+            console.log('User logged in');
         },
         logout: function() {
             this.logged = false;
+        },
+        register: function() {
+            this.logged = true;
+            console.log('User registered');
         },
         username: 'John Doe'
     });

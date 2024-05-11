@@ -16,8 +16,21 @@ class SubscriptionCard extends Component {
         this.setState({ modalIsOpen: false });
     };
 
-    handlePayment = (price) => {
-        console.log(`Payment made for subscription: ${price}`);
+    handlePayment = () => {
+        fetch('/api/pay_s', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(this.props.subscription),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Payment successful:', data);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
         this.closeModal();
     };
 

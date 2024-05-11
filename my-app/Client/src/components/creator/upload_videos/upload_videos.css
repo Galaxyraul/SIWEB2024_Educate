@@ -1,0 +1,76 @@
+/* video_upload_module.css */
+
+.video-upload-module {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section .set-up {
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    background: white;
+    border-radius: 10px;
+    margin-right: 2vw;
+}
+
+.section{
+    display: flex;
+}
+
+.upload-input {
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.upload-input::placeholder {
+    color: #ddd;
+}
+
+.upload-file {
+    display: none;
+}
+
+.upload-button {
+    margin-top: 10px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    max-width: 20vw;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-title {
+    color: black;
+}
+
+.card-description,
+.card-url {
+    color: black;
+}
+.card-video {
+    width: 100%;
+    position: relative;
+}
+
+.card-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

@@ -1,5 +1,5 @@
-import ChatContainer from "../../chat";
-import LoginRegister from "../../login_register";
+import ChatContainer from "../chat";
+import LoginRegister from "../profile/login_register/login_register";
 
 const Landing = ({ user }) => {
     return(

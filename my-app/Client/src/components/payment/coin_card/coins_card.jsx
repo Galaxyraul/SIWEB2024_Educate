@@ -14,6 +14,24 @@ class CoinCard extends Component {
         this.setState({ modalIsOpen: false });
     };
 
+    handlePayment = () => {
+        fetch('/api/pay_s', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(this.props),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Payment successful:', data);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+
+        this.closeModal();
+    };
     render() {
         const { coin } = this.props;
         return (

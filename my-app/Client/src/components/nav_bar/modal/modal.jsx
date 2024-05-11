@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './styles.css';
-import LoginRegister from '../../login_register'
-import UserProfile from '../../account';
+import LoginRegister from '../../profile/login_register/login_register'
+import UserProfile from '../../profile/account/account';
 const Modal = ({ isOpen, onClose,user }) => {
   if (!isOpen) {
     return null;

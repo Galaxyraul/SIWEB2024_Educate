@@ -1,0 +1,62 @@
+
+.set-up *{
+    margin: 1%;
+}
+.upload-module {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.upload-input{
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.upload-input::placeholder{
+    color: #ddd;
+
+}
+.custom-file-upload {
+    padding: 10px;
+    margin-bottom: 20px;
+    background: #4CAF50;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.upload-file {
+    display: none;
+}
+.upload-file::bu
+.upload-button {
+    margin-top: 10px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    max-width: 20dvw;
+    background: white;
+    border-radius: 10px;
+}
+
+.card-title{
+    color: black;
+}
+
+.card-description,
+.card-filename,
+.card-tags {
+    color: black;
+}

@@ -1,20 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect }from 'react';
 import Coin_Cards from './coin_card/coins_card'; 
 import Ad_reward from './ad_reward/ad_reward';
 import SubscriptionCard from './subscription_card/subscription';
 import './payment_page.css'; 
 
 const PaymentsPage = ({ user }) => {
-    const subscriptions = [
-        { name: 'Premium', features: ['Feature 1', 'Feature 2'], duration: '1 month', price: '10' },
-        { name: 'Basic', features: ['Feature 3', 'Feature 4'], duration: '1 month', price: '5' },
-        { name: 'Pro', features: ['Feature 5', 'Feature 6'], duration: '1 month', price: '15'}
-    ];
-    const coins = [
-        { name: 'Gold Coin', image: '/path/to/image', quantity: 100, price: '10' },
-        { name: 'Silver Coin', image: '/path/to/image', quantity: 50, price: '5' },
-        { name: 'Bronze Coin', image: '/path/to/image', quantity: 25, price: '2.5' }
-    ];
+    const [subscriptions, setSubscriptions] = useState([]);
+    const [coins, setCoins] = useState([]);
+
+    useEffect(() => {
+        fetch('/api/subscriptions')
+            .then(response => response.json())
+            .then(data => setSubscriptions(data));
+
+        fetch('/api/coins')
+            .then(response => response.json())
+            .then(data => setCoins(data));
+    }, []);
     return (
         <div className="payments-container">
             <h2>Monedas</h2>

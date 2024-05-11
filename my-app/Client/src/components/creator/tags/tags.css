@@ -1,0 +1,43 @@
+/* tags.css */
+
+/* Style the search input */
+.tags input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.tags input[type="text"]::placeholder{
+    color: white;
+}
+
+
+/* Style the tag list */
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Style each tag */
+.tag-list .tag {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom:10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Style the selected tag */
+.tag-list .tag.selected {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Style the tag list when it's empty */
+.tag-list.empty {
+    text-align: center;
+    color: #777;
+}

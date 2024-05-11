@@ -1,0 +1,43 @@
+.login-register {
+    background-color: white;
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.login-tabs {
+    display: flex;
+}
+.login-tabs button{
+    width: 12dvw;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.login-tabs button.selected {
+    background-color: #4CAF50; /* for example */
+    color: white;
+}
+.user-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-input input[type="text"],
+.user-input input[type="password"],
+.user-input input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.user-input button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
