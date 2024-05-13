@@ -1,0 +1,25 @@
+.review-container {
+    width: 40dvw;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-height: 70dvh;
+    overflow: auto;
+}
+
+.review-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+}
+
+.review-container iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+}
+
+.pdf-page {
+    margin-bottom: 10px; /* Adjust as needed */
+}

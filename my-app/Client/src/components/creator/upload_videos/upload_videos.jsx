@@ -1,13 +1,35 @@
 import React, { useState } from 'react';
 import './upload_videos.css';
 
-const VideoUploadModule = ({handleSubmit,videos_cards,setVideosCards}) => {
+const VideoUploadModule = ({lectureId}) => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [url, setUrl] = useState('');
   const [editingIndex, setEditingIndex] = useState(null);
+  const [videos_cards, setVideosCards] = useState([]);
+  
+  const handleSubmit = () => {
+    fetch('http://localhost:5000/videosAdd', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        lectureId: lectureId,
+        videos: videos_cards,
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+    
+    
+  };
   const handleEdit = (index) => {
-    const video = videos[index];
+    const video = videos_cards[index];
     setTitle(video.title);
     setDescription(video.description);
     setUrl(video.url);

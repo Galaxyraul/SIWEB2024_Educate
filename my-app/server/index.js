@@ -1,57 +1,59 @@
 const express = require('express');
-const bcrypt = require('bcrypt');
-const mysql = require('mysql2/promise');
+const mysql = require('mysql2');
+const cors = require('cors');
 
 const app = express();
+
+app.use(express.json({ encoding: 'utf8' }));
 app.use(express.json());
+app.use(cors());
+app.use('/pictures', express.static('pictures'));
 
 const port = 5000;
 
+const payments = require('./scripts/payments');
+const categories = require('./scripts/categories');
+const lectures = require('./scripts/lectures');
+const user = require('./scripts/user');
+
 const db = mysql.createPool({
-  host: 'localhost',
-  user: 'root',
-  password: 'password',
-  database: 'test',
+  host: '127.0.0.1',
+  port: 3316,
+  user: 'bdd',
+  password: 'bdd',
+  database: 'bdd',
 });
 
-app.post('/api/login', async (req, res) => {
-  const { username, password } = req.body;
+lectures(app, db);
 
-  try {
-    const [rows] = await db.query('SELECT * FROM users WHERE username = ?', [username]);
-    const user = rows[0];
+payments(app, db);
 
-    if (!user) {
-      return res.status(400).json({ success: false, message: 'Invalid username or password' });
-    }
+categories(app, db);
 
-    const passwordMatch = await bcrypt.compare(password, user.password);
+user(app, db);
+app.use('/resources', express.static('./resources'));
 
-    if (!passwordMatch) {
-      return res.status(400).json({ success: false, message: 'Invalid username or password' });
-    }
-
-    res.json({ success: true });
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ success: false, message: 'Internal server error' });
-  }
+app.get('/tables', (req, res) => {
+  db.promise().query('SHOW TABLES')
+    .then(([rows, fields]) => {
+      res.send(rows);
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).send('Server error');
+    });
+});
+app.get('/categories', (req, res) => {
+  db.promise().query('SELECT name FROM categories')
+    .then(([rows, fields]) => {
+      res.send(rows);
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).send('Server error');
+    });
 });
 
-app.post('/api/register', async (req, res) => {
-  const { username, password } = req.body;
-
-  try {
-    const hashedPassword = await bcrypt.hash(password, 10);
-
-    await db.query('INSERT INTO users (username, password) VALUES (?, ?)', [username, hashedPassword]);
-
-    res.json({ success: true });
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ success: false, message: 'Internal server error' });
-  }
-});
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);

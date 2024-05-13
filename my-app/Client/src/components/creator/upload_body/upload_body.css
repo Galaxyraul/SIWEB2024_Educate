@@ -1,7 +1,15 @@
-
-.set-up *{
-    margin: 1%;
+.create-container{
+    height: 80dvh;
+    background-image: url('http://localhost:5000/resources/images/backgrounds/creator.jpg');
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-size: cover; 
+    color:white;
 }
+.file-container{
+    display: flex;
+}
+
 .upload-module {
     margin: 10px;
     display: flex;
@@ -36,17 +44,19 @@
 .upload-file {
     display: none;
 }
-.upload-file::bu
 .upload-button {
     margin-top: 10px;
 }
-
+.delete-button{
+   margin-left:10px; 
+}
 .card {
     border: 1px solid #ddd;
     padding: 10px;
     margin-top: 20px;
     border-radius: 5px;
-    max-width: 20dvw;
+    min-width: 20dvw;
+    min-height: 20dvw;
     background: white;
     border-radius: 10px;
 }

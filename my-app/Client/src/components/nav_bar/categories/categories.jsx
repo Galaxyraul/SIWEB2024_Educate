@@ -1,19 +1,28 @@
-import React from 'react';
-import './styles.css'; // Import the CSS file for styling
+// categories.jsx
 
-const Categories = ({ heading, subcategories }) => {
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './styles.css';
+
+const CategoriesModule = ({ categories }) => {
   return (
-    <div className="categories-container">
-      <h2 className="category-heading">{heading}</h2>
-      <div className="subcategory-blocks">
-        {subcategories.map((subcategory, index) => (
-          <a key={index} href={`#${subcategory}`} className="subcategory-block">
-            {subcategory}
-          </a>
-        ))}
-      </div>
+    <div className="categories-module">
+      {Object.entries(categories).map(([category, subcategories], index) => (
+        <div key={index}>
+          <h2>
+            <Link to={`/documents/${category}`} className="category-link">{category}</Link>
+          </h2>
+          <ul>
+            {subcategories.map((subcategory, subIndex) => (
+              <li key={subIndex}>
+                <Link to={`/documents/${subcategory}`} className="subcategory-link">{subcategory}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
     </div>
   );
 };
 
-export default Categories;
+export default CategoriesModule;

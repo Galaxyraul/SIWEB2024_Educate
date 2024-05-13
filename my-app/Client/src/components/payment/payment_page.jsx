@@ -9,30 +9,33 @@ const PaymentsPage = ({ user }) => {
     const [coins, setCoins] = useState([]);
 
     useEffect(() => {
-        fetch('/api/subscriptions')
-            .then(response => response.json())
-            .then(data => setSubscriptions(data));
+        fetch('http://localhost:5000/subscription_types')
+        .then(response => response.json())
+        .then(data => {setSubscriptions(data);})
+        .catch(error => console.error('Error:', error));
 
-        fetch('/api/coins')
-            .then(response => response.json())
-            .then(data => setCoins(data));
+        fetch('http://localhost:5000/coins_pack')
+        .then(response => response.json())
+        .then(data => {setCoins(data);})
+        .catch(error => console.error('Error:', error));
     }, []);
+
     return (
         <div className="payments-container">
-            <h2>Monedas</h2>
+            <h1>Monedas</h1>
             <div className='coins'>
             {coins.map((coin, index) => (
                     <Coin_Cards user = {user} coin = {coin}/>
                 ))}
                 
             </div>
-            <h2>Subscricciones</h2>
+            <h1>Subscricciones</h1>
             <div className='subscriciones'>
                 {subscriptions.map((subscription, index) => (
-                    <SubscriptionCard key={index} subscription={subscription} />
+                    <SubscriptionCard key={index} user ={user} subscription={subscription} />
                 ))}
             </div>
-            <h2>Patrocinado</h2>
+            <h1>Patrocinado</h1>
             <div>
                 <Ad_reward />
             </div>

@@ -14,36 +14,22 @@ class CoinCard extends Component {
         this.setState({ modalIsOpen: false });
     };
 
-    handlePayment = () => {
-        fetch('/api/pay_s', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(this.props),
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log('Payment successful:', data);
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-        });
-
-        this.closeModal();
-    };
     render() {
         const { coin } = this.props;
         return (
             <div className="coin-card">
                 <h2>{coin.name}</h2>
-                <img src={coin.image} alt="Coin" />
+                <img src={"http://localhost:5000/resources/" + coin.image_path} alt="Coin" />
                 <p>Cantidad: {coin.quantity}</p>
                 <p>Precio: {coin.price}€</p>
                 <PaymentOptionsModal 
                     isOpen={this.state.modalIsOpen} 
                     onRequestClose={this.closeModal} 
                     price={coin.price}
+                    coins = {coin.quantity}
+                    isSubscription={false}
+                    user={this.props.user}
+                    type={coin.name}
                 />
             </div>
         );

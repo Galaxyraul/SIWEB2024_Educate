@@ -1,16 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import "./tags.css";
 
-const TagSelector = ({ tags }) => {
-  const [selectedTags, setSelectedTags] = useState([]);
+
+const TagSelector = ({ selectedTags, onTagSelect }) => {
   const [searchTerm, setSearchTerm] = useState('');
-
+  const [tags, setTags] = useState([]); 
+  useEffect(() => {
+    fetch('http://localhost:5000/categories')
+      .then(response => response.json())
+      .then(data => {
+        const tagNames = data.map(tag => tag.name);
+        setTags(tagNames);
+      })
+      .catch(error => console.error('Error:', error));
+  }, []);
   const handleTagClick = (tag) => {
-    setSelectedTags((prevTags) =>
-      prevTags.includes(tag) ? prevTags.filter((t) => t !== tag) : [...prevTags, tag]
-    );
+    if (selectedTags.includes(tag)) {
+      // If the tag is already selected, remove it from the array
+      onTagSelect(selectedTags.filter(t => t !== tag));
+    } else {
+      // If the tag is not selected, add it to the array
+      onTagSelect([...selectedTags, tag]);
+    }
   };
-
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
@@ -31,7 +43,7 @@ const TagSelector = ({ tags }) => {
         {filteredTags.length === 0 ? (
           <p>No tags found</p>
         ) : (
-          filteredTags.map((tag) => (
+          filteredTags.slice(0, 10).map((tag) => (
             <div
               key={tag}
               className={`tag ${selectedTags.includes(tag) ? 'selected' : ''}`}

@@ -1,0 +1,44 @@
+.home-flex {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:80dvh;
+    background-image: url('http://localhost:5000/resources/images/backgrounds/home.jpg');
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-size: cover; 
+    color:white;
+}
+
+.home-flex h2{
+    font-size:2em;
+}
+
+.home-chat{
+    position: fixed;
+    left:0px;  
+}
+
+.home-container {
+    display: flex;
+    justify-content: flex-start;
+    background-color: white;
+    border-radius: 10px;
+    max-width: 60dvw;
+}
+
+.home-card {
+    color: black;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-card .link {
+    color: #000; /* Change the link color to black */
+    text-decoration: none; /* Remove the underline */
+}

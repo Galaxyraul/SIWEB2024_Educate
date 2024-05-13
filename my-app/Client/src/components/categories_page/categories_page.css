@@ -1,0 +1,14 @@
+.categories-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url('http://localhost:5000/resources/images/backgrounds/categories.jpg');
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-size: cover; 
+    color:white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}

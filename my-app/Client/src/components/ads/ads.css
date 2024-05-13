@@ -1,0 +1,12 @@
+.vertical-ad {
+    width: 15dvw;
+    height:70dvh;
+    overflow: auto;
+    text-align: center;
+
+}
+
+.vertical-ad img {
+    width: 100%;
+    height: auto;
+}

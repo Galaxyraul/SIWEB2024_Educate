@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './account.css';
 
 const UserProfile = ({ user, closeModal }) => {
@@ -10,9 +11,50 @@ const UserProfile = ({ user, closeModal }) => {
 
 
     const handleSave = () => {
-        user.update(username,mail, password,cPassword);
-        setIsEditMode(false);
-        closeModal()
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (mail && !emailRegex.test(mail)) {
+            alert('Invalid email format');
+            return;
+        }
+
+        if (password !== cPassword) {
+            alert('Passwords do not match');
+            return;
+        }
+
+        let requestBody = {
+            nick: username,
+        };
+
+        if (mail) {
+            requestBody.mail = mail;
+        }
+
+        if (password) {
+            requestBody.password = password;
+        }
+
+        fetch('http://localhost:5000/editUser', {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(requestBody),
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                alert(data.error);
+            } else {
+                alert("User data updated successfully");
+                setIsEditMode(false);
+                closeModal();
+            }
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
     };
 
     const handleCancel = () => {
@@ -37,7 +79,12 @@ const UserProfile = ({ user, closeModal }) => {
             </div>
         );
     }
-
+    const navigate = useNavigate();
+    const handleLogout = () => {
+        user.logout();
+        closeModal();
+        navigate('/landing');
+    };
     return (
         <div className="account">
             <h3>
@@ -50,7 +97,7 @@ const UserProfile = ({ user, closeModal }) => {
             <input type="text" value={user.mail}readOnly />
             <div>
                 <button onClick={() => {setIsEditMode(true)}}>Edit</button>
-                <button onClick={() => {user.logout();closeModal()}}>Logout</button>
+                <button onClick={handleLogout}>Logout</button>
             </div>
         </div>
     );

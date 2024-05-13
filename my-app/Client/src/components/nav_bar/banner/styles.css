@@ -14,11 +14,16 @@
     box-shadow: inset 0px 10px 20px rgba(255, 255, 255, 0.3);
 }
 
-.heading {
+.heading-banner.heading {
     font-size: 2.5em;
     margin-bottom: 10px;
+    color:white
 }
 
-.subtitle {
+.heading-banner.subtitle {
     font-size: 1.5em;
+}
+
+h1.heading-banner.heading {
+    color: white;
 }
