@@ -31,7 +31,7 @@ const LoginRegister = ({ user, closeModal }) => {
         .then(response => response.json())
         .then(data => {
             if (data.message === 'User not found') {
-                setErrorMessage('Usuario no encontrado');
+                setErrorMessage('Credenciales inválidas');
                 setActiveTab('error');
             } else if(data.message === 'Invalid credentials') {
                 setErrorMessage('Credenciales inválidas');
@@ -111,30 +111,30 @@ const LoginRegister = ({ user, closeModal }) => {
                 className={activeTab === 'login' ? 'selected' : ''} 
                 onClick={() => setActiveTab('login')}
                 >
-                    Login
+                    Acceder
                 </button>
                 <button 
                 className={activeTab === 'register' ? 'selected' : ''} 
                 onClick={() => setActiveTab('register')}
                 >
-                    Register
+                    Registro
                 </button>
             </div>
 
             {activeTab === 'login' && (
                 <div className='user-input'>
-                    <input type="text" value={username} onChange={handleUsernameChange} placeholder="Username" />
-                    <input type="password" value={password} onChange={handlePasswordChange} placeholder="Password" />
-                    <button onClick={() => {handleLogin();}}>Submit</button>
+                    <input type="text" value={username} onChange={handleUsernameChange} placeholder="Usuario" />
+                    <input type="password" value={password} onChange={handlePasswordChange} placeholder="Contraseña" />
+                    <button onClick={() => {handleLogin();}}>Enviar</button>
                 </div>
             )}
 
             {activeTab === 'register' && (
                 <div className='user-input'>
-                    <input type="text" value={username} onChange={handleUsernameChange} placeholder="Username" />
-                    <input type="email" value={email} onChange={handleEmailChange} placeholder="Email" />
-                    <input type="password" value={password} onChange={handlePasswordChange} placeholder="Password" />
-                    <input type="password" value={confirmPassword} onChange={handleConfirmPasswordChange} placeholder="Confirm Password" />
+                    <input type="text" value={username} onChange={handleUsernameChange} placeholder="Usuario" />
+                    <input type="email" value={email} onChange={handleEmailChange} placeholder="Correo" />
+                    <input type="password" value={password} onChange={handlePasswordChange} placeholder="Contraseña" />
+                    <input type="password" value={confirmPassword} onChange={handleConfirmPasswordChange} placeholder="Confirmar contraseña" />
                     <button onClick={() => {handleRegister();}}>Submit</button>
                 </div>
                 )}

@@ -4,7 +4,7 @@ import './chat.css';
 const ChatContainer = ({user}) => {
     const [displayed, setDisplayed] = useState(false);
     const [messages, setMessages] = useState([
-        { type: 'bot', content: 'Welcome to our chat!', img: 'http://localhost:5000/resources/images/logo_educate.jpg' }
+        { type: 'bot', content: "Bienvenido a nuestro chat", img: 'http://localhost:5000/resources/images/logo_educate.jpg' }
     ]);
     const [inputValue, setInputValue] = useState('');
 
@@ -31,7 +31,7 @@ const ChatContainer = ({user}) => {
             { type: 'bot', content: <div>Para resolver una ecuación lo primero es saber de que tipo es.<br/>
                 Suponiendo que nos enfrentemos a una ecuación de 2º grado recomiendo aplicar la fórmula:<br/>
                 -b±√(b²-4ac)/2a<br/>
-                Para más información visita <a href="http://example.com">Ecuaciones</a></div>, img: 'http://localhost:5000/resources/images/logo_educate.jpg' }
+                Para más información visita <a href="/documents/Matematicas/Ecuaciones">Ecuaciones</a></div>, img: 'http://localhost:5000/resources/images/logo_educate.jpg' }
         ]);
         setInputValue('');
     }
@@ -68,8 +68,8 @@ const ChatContainer = ({user}) => {
                             value={inputValue}
                             onChange={(e) => setInputValue(e.target.value)}
                         />
-                        <button className="chat_bar_button" onClick={clearMessages} style={{ display: displayed ? 'block' : 'none' }}>clear</button>
-                        <button className="chat_bar_button" onClick={sendMessage} style={{ display: displayed ? 'block' : 'none' }}>Send</button>
+                        <button className="chat_bar_button" onClick={clearMessages} style={{ display: displayed ? 'block' : 'none' }}>Limpiar</button>
+                        <button className="chat_bar_button" onClick={sendMessage} style={{ display: displayed ? 'block' : 'none' }}>Enviar</button>
                     </div>
                 </div>
                 <button id="display_chat" onClick={toggleDisplay}>{displayed ? '<' : '>'}</button>

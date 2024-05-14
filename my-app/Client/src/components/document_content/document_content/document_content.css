@@ -52,7 +52,7 @@
 
 
 .doc-container .button-selected {
-    background-color: #ff6347; /* Tomato color for more contrast */
+    background-color: #3e9bfd; /* Tomato color for more contrast */
     font-weight: bold; /* Make the text bold */
-    border: 2px solid #ff6347; /* Add a border of the same color */
+    border: 2px solid #3e9bfd; /* Add a border of the same color */
 }

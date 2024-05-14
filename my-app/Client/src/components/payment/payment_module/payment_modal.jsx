@@ -73,7 +73,7 @@ render() {
     
     return (
     <div>
-        <button className="modal-button" onClick={this.openModal}>Buy Now</button>
+        <button className="modal-button" onClick={this.openModal}>Comprar ahora</button>
         <Modal
             isOpen={this.state.modalIsOpen}
             onRequestClose={this.closeModal}

@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import Document from "./document/document";
 import ChatContainer from "../chat/chat";
 import Ad from "../ads/ads";
-
+import './documents_page.css';
 const Documents_page = ({ user }) => {
     const { categoryId } = useParams();
     const [documents, setDocuments] = useState([]);
@@ -17,10 +17,14 @@ const Documents_page = ({ user }) => {
 
     return (
         
-        <div className="flex">
-            <ChatContainer user={user} />
+        <div className="documents-flex">
+            <div className="documents-chat">
+                <ChatContainer user={user} />
+            </div>
             <Document documents={documents} />
-            <Ad />
+            <div className="ad">
+                <Ad />
+            </div>
         </div>
     );
 }

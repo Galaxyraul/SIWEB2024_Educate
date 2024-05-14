@@ -22,13 +22,12 @@
 .home-container {
     display: flex;
     justify-content: flex-start;
-    background-color: white;
     border-radius: 10px;
     max-width: 60dvw;
 }
 
 .home-card {
-    color: black;
+    color: white;
     border: 1px solid black;
     border-radius: 10px;
     margin: 10px;
@@ -36,9 +35,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color:white;
 }
 
+.home-card:hover{
+    background-color: black;
+    
+}
 .home-card .link {
-    color: #000; /* Change the link color to black */
+    color: black; /* Change the link color to black */
     text-decoration: none; /* Remove the underline */
+}
+.home-card .link:hover{
+    color:#ffd700;
 }

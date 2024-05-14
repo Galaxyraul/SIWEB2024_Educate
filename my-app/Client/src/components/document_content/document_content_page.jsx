@@ -3,7 +3,7 @@ import ChatContainer from "../chat/chat";
 import Ad from "../ads/ads";
 import React,{useState,useEffect} from 'react';
 import { useParams } from "react-router-dom";
-
+import './document_content_page.css';
 const Documents_content_page = ({ user }) =>{
     const {documentId} = useParams()
     const[document,setDocument] = useState('');
@@ -16,10 +16,14 @@ const Documents_content_page = ({ user }) =>{
         }, []);
 
     return(
-        <div className="flex">
-            <ChatContainer user = {user}/>
+        <div className="content-flex">
+            <div className = "content-chat">
+                <ChatContainer user = {user}/>
+            </div>
             <DocumentContent document = {document} />
-            <Ad />
+            <div className="ad">
+                <Ad />
+            </div>
         </div>
     );
 }

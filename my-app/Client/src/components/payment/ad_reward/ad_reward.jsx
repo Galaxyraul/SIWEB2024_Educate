@@ -14,23 +14,24 @@ class Ad_reward extends Component {
     };
 
     handleClaimReward = () => {
-        alert('Reward claimed!');
+        alert('Recompensa Reclamada!');
         this.setState({ modalIsOpen: false });
         this.state.videoWatched = false;
+        this.props.user.addBalance(10)
     };
 
     openModal = () => {
         this.setState({ modalIsOpen: true });
 
         // Simulate the video duration
-        setTimeout(this.handleVideoEnd, 30000); // 30 seconds
+        setTimeout(this.handleVideoEnd, 15000); // 30 seconds
     };
 
     render() {
         return (
             <div className='watch-video-card'>
-                <h2>Watch a video to earn rewards</h2>
-                <button onClick={this.openModal}>Watch Video</button>
+                <h2>Ve un video para ganar recompensas</h2>
+                <button onClick={this.openModal}>Ver video</button>
                 <Modal 
                     isOpen={this.state.modalIsOpen}
                     onRequestClose={this.state.videoWatched ? this.handleClaimReward : undefined}
@@ -51,11 +52,11 @@ class Ad_reward extends Component {
                 >
                     <iframe 
                         className='video-player'
-                        src="https://www.youtube.com/embed/C0lKu-0jik0?autoplay=1" 
+                        src="https://www.youtube.com/embed/uSikKwOmpRc?autoplay=1" 
                         title="YouTube video player" 
                     ></iframe>      
                     {this.state.videoWatched && (
-                        <button onClick={this.handleClaimReward}>Claim Reward</button>
+                        <button onClick={this.handleClaimReward}>Reclamar</button>
                     )}
                 </Modal>
             </div>

@@ -37,7 +37,7 @@ const PaymentsPage = ({ user }) => {
             </div>
             <h1>Patrocinado</h1>
             <div>
-                <Ad_reward />
+                <Ad_reward user = {user}/>
             </div>
         </div>
     );

@@ -42,6 +42,6 @@
 }
 
 .mail-item.selected {
-    background-color: #4CAF50; /* for example */
+    background-color: #007BFF; /* for example */
     color: white;
 }

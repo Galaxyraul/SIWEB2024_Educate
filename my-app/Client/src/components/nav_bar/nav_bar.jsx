@@ -107,13 +107,13 @@ const NavBar = ({user}) => {
                     </ul>
                     <SearchBar />
                     <ul className = "right">
-                    <Link to="/payments"><div className='balance'>{user.balance}<img src = "http://localhost:5000/resources/images/coins_logo.png" alt = "coins"></img></div></Link>
+                    <Link to="/payments"><div className='balance'>{user.balance}<img className = "coins" src = "http://localhost:5000/resources/images/coins_logo.png" alt = "coins"></img></div></Link>
                         <Slider />
                         <LanguageDropdown />
                         {user.logged ? (
                             <h2 id="profile" onClick={openModal}>{user.username}</h2>
                         ) : (
-                            <h2 id="login" onClick={openModal}>Registro</h2>
+                            <h2 id="login" onClick={openModal}>Acceder</h2>
                         )}
                     </ul>
                     

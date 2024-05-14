@@ -14,9 +14,10 @@
     width: 12dvw;
     text-align: center;
     margin-bottom: 10px;
+    background-color: #007BFF;
 }
 .login-tabs button.selected {
-    background-color: #4CAF50; /* for example */
+    background-color: #3e9bfd; 
     color: white;
 }
 .user-input {
@@ -37,7 +38,7 @@
     padding: 10px;
     border: none;
     border-radius: 4px;
-    background-color: #4CAF50;
+    background-color: #007BFF;;
     color: white;
     cursor: pointer;
 }

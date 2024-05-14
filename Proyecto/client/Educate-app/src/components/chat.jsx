@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from 'react';
 import '../styles/chat.css';
 
 const ChatContainer = () => {
-    {/*TODO get messages from server*/ }
     const [displayed, setDisplayed] = useState(false);
     const [messages, setMessages] = useState([]);
     const [inputValue, setInputValue] = useState('');

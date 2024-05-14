@@ -5,7 +5,6 @@ import Ad from './ads';
 
 const ReviewPage = () => {
     const [pendingDoc, setDoc] = useState([]);
-    {/*TODO FIX THIS FETCH*/}
     useEffect(() => {
         fetch('/path/to/your/api')
             .then(response => response.json())

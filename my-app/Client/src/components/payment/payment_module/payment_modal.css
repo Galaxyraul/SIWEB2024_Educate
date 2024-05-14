@@ -30,7 +30,9 @@
     cursor: pointer;
     border-radius: 4px;
 }
-
+.modal-button:hover{
+    background-color: #3e9bfd;
+}
 .modal-input {
     width: 100%;
     padding: 12px 20px;

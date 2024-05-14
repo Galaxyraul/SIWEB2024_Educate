@@ -69,6 +69,7 @@ function App() {
         <Router>
             <NavBar user={user} />  
             <Routes>
+                <Route path="/" element={<Landing user={user} />} />
                 <Route path="/Home" element={<Home user={user} />} />
                 <Route path="/payments" element={<PaymentsPage user={user} />} />
                 <Route path="/landing" element={<Landing user={user} />} />

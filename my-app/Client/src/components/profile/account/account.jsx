@@ -14,12 +14,12 @@ const UserProfile = ({ user, closeModal }) => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if (mail && !emailRegex.test(mail)) {
-            alert('Invalid email format');
+            alert('Formato de email incorrecto');
             return;
         }
 
         if (password !== cPassword) {
-            alert('Passwords do not match');
+            alert('Las contraseñas tienen que ser la misma');
             return;
         }
 
@@ -73,8 +73,8 @@ const UserProfile = ({ user, closeModal }) => {
                 <h3>Confirmar Contraseña</h3>
                 <input type="password" value={cPassword} placeholder= {user.password}/>
                 <div>
-                    <button onClick={handleSave}>Save</button>
-                    <button onClick={handleCancel}>Cancel</button>
+                    <button onClick={handleSave}>Guardar</button>
+                    <button onClick={handleCancel}>Cancelar</button>
                 </div>
             </div>
         );
@@ -96,7 +96,7 @@ const UserProfile = ({ user, closeModal }) => {
             </h3>
             <input type="text" value={user.mail}readOnly />
             <div>
-                <button onClick={() => {setIsEditMode(true)}}>Edit</button>
+                <button onClick={() => {setIsEditMode(true)}}>Editar</button>
                 <button onClick={handleLogout}>Logout</button>
             </div>
         </div>

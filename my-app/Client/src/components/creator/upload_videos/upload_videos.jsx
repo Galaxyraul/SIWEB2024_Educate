@@ -70,11 +70,11 @@ const VideoUploadModule = ({lectureId}) => {
   return (
     <div className='section'>
       <div className="set-up">
-          <input className="upload-input" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Title" />
-          <input className="upload-input" value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Description" />
-          <input className="upload-input" value={url} onChange={(e) => setUrl(e.target.value)} placeholder="URL" />
-          <button className="upload-button" onClick={handleAddOrSave}>{editingIndex !== null ? 'Save' : 'Add'}</button>
-          <button className="upload-button" onClick={handleSubmit}>Submit</button>
+          <input className="upload-input" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Título" />
+          <input className="upload-input" value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Descripción" />
+          <input className="upload-input" value={url} onChange={(e) => setUrl(e.target.value)} placeholder="Enlace" />
+          <button className="upload-button" onClick={handleAddOrSave}>{editingIndex !== null ? 'Guardar' : 'Añadir'}</button>
+          <button className="upload-button" onClick={handleSubmit}>Enviar</button>
       </div>
       <div className="video-upload-module">
         {videos_cards.map((video, index) => (
@@ -92,8 +92,8 @@ const VideoUploadModule = ({lectureId}) => {
             <p className="card-url">URL: {video.url}</p>
           </div>
           <div>
-            <button className="edit-button" onClick={() => handleEdit(index)}>Edit</button>
-            <button className="delete-button" onClick={() => handleDelete(index)}>Delete</button>
+            <button className="edit-button" onClick={() => handleEdit(index)}>Editar</button>
+            <button className="delete-button" onClick={() => handleDelete(index)}>Borrar</button>
           </div>
           
         </div>

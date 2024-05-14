@@ -13,6 +13,7 @@ const Mailbox = ({ user, mails, onSelectMail, selectedMail,onRemoveMail}) => {
         .then(response => response.json())
         .then(data => {});
         onRemoveMail(mail);
+        user.addBalance(100)
     };
     const handleRefuse = (mail) => {
         fetch(`http://localhost:5000/refuse`, {
@@ -25,6 +26,7 @@ const Mailbox = ({ user, mails, onSelectMail, selectedMail,onRemoveMail}) => {
         .then(response => response.json())
         .then(data => {});
         onRemoveMail(mail);
+        user.addBalance(100)
     };
     return (
         <div className="mailbox-container">

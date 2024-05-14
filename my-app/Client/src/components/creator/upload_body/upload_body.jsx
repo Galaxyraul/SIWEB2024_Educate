@@ -77,13 +77,13 @@ const FileUploadModule = ({userId,lectureId,setLectureId}) => {
       <div className='set-up'>
         <label className="custom-file-upload">
           <input className="upload-file" type="file" onChange={handleFileChange} />
-          Upload File
+          Subir archivo
         </label>
-        <input className="upload-input" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Title" />
-        <input className="upload-input" value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Description" />
-        <button onClick={() => setModalOpen(true)}>Select Tags</button>
-        <button className="upload-button" onClick={handleAdd}>Add</button>
-        <button className="upload-button" onClick={handleSubmit}>Submit</button>
+        <input className="upload-input" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Título" />
+        <input className="upload-input" value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Descripción" />
+        <button onClick={() => setModalOpen(true)}>Etiquetas</button>
+        <button className="upload-button" onClick={handleAdd}>Añadir</button>
+        <button className="upload-button" onClick={handleSubmit}>Enviar</button>
       </div>
       <div className="upload-module">
         {modalOpen && (

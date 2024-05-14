@@ -1,0 +1,16 @@
+.content-flex{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:80dvh;
+    background-image: url('http://localhost:5000/resources/images/backgrounds/content.jpg');
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-size: cover; 
+    color:white;
+}
+
+.content-chat{
+    position: fixed;
+    left:0px;  
+}

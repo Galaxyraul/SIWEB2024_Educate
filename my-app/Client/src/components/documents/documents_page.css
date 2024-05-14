@@ -1,0 +1,16 @@
+.documents-flex{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:80dvh;
+    background-image: url('http://localhost:5000/resources/images/backgrounds/documents.jpg');
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-size: cover; 
+    color:white;
+}
+
+.documents-chat{
+    position: fixed;
+    left:0px;  
+}
