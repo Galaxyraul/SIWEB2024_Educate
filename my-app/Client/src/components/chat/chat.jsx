@@ -12,6 +12,9 @@ const ChatContainer = ({user}) => {
 
     const toggleDisplay = () => {
         setDisplayed(!displayed);
+        if (!displayed) {
+            document.getElementById('display_chat').style.animation = 'none';
+        }
     };
 
     const sendMessage = () => {

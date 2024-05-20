@@ -61,7 +61,10 @@ INSERT INTO users (nick, role, mail, password) VALUES ('FionaDavis', 'creator', 
 ('OpinionOracle', 'reviewer', 'opinion.oracle@mail.com', '$2b$10$nK6FTPvva3mgmdnU6qvRG.vOjO6C2YKPCl/gp1NqlQXBaxUTLOj6O'),
 ('CharlieBrown', 'reader', 'charlie.brown@mail.com', '$2b$10$4cqKPybfoeKGORonZn9zEuHRQtrh1Kw4gRCPyUy2zZjuwTaBAeNhi'),
 ('JohnDoe', 'reader', 'john.doe@mail.com', '$2b$10$Kjjm.DQErv/VpT1AEQluLeTABcKQIi6uWFnxSJc7O/A2oevWMeYGi'),
-('DianaClark', 'creator', 'diana.clark@mail.com', '$2b$10$34B0d.41rI1jhHyYjfQJ0uHR24TdY9c3Pxmg3Vj8htaE6d/2rmhKO');
+('DianaClark', 'creator', 'diana.clark@mail.com', '$2b$10$34B0d.41rI1jhHyYjfQJ0uHR24TdY9c3Pxmg3Vj8htaE6d/2rmhKO'),
+('reader', 'reader', 'new.reader@mail.com', '$2b$10$vNp64XR61Aez3d0UnAPtcOETD/jIjBsCzObY.LCPoX8cexwvWZGLK'),
+('creator', 'creator', 'new.creator@mail.com', '$2b$10$vNp64XR61Aez3d0UnAPtcOETD/jIjBsCzObY.LCPoX8cexwvWZGLK'),
+('reviewer', 'reviewer', 'new.reviewer@mail.com', '$2b$10$vNp64XR61Aez3d0UnAPtcOETD/jIjBsCzObY.LCPoX8cexwvWZGLK');
 
 INSERT INTO lectures(name, description,status, creator, path, reviewer) VALUES ('Historia de la fisica', 'Historia de la fisica desde la antigüedad hasta la actualidad', 'accepted', 'FionaDavis', 'lectures/history_of_physics.pdf', 'ReviewMaster'),
 ('Historia de la literatura', 'Historia de la literatura desde la antigüedad hasta la actualidad', 'pending', 'JaneSmith', 'lectures/history_of_literature.pdf', NULL),

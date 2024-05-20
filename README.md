@@ -33,29 +33,9 @@ Por ello, este proyecto propone una nueva herramienta para facilitar el aprendiz
 
 [Contenido](https://docs.google.com/document/d/1UV8JGMFoW1G55uuYUK2NgMUBsQX3uqivG4mUiQe4Ql8/edit?usp=sharing)
 
-- AI Contenidos: Qué contenido hay, qué contenido se necesita.
-  - Tipos de contenido (distinguir entre estáticos y dinámicos, estructurados o no)
-  - Clasificación y prioridades 
-  - Sistemas de clasificación 
-  - Prioridades de publicación y actualización
-- Diseño de la AI
-  - Etiquetas y lenguaje
-  - Patrones de diseño
-  - Mapa conceptual del sitio web
 [Navegación](https://docs.google.com/document/d/1Hw9jLCTl8dZxZpJHpPd7AEnM6j7STfRNazInh7Hnp3E/edit?usp=sharing)
 
 ## Fase de Implementación
-- Tecnologías y herramientas a utilizar
-- Estrategia en el desarrollo de la implementación
-- Desarrollo de la primera versión
-- Hojas de estilo y elementos de interacción.
-- Primera prueba de usabilidad /Análisis de resultados
-- Desarrollo de la segunda versión
-  - Diseño para móviles y tabletas
-  - Comprobación diseño responsive dispositivos
-  - Comprobación diseño en navegadores
-  - Comprobación con validadores del W3C
-  - Comprobación con validadores accesibilidad
-- Segunda prueba de usabilidad.
+[Implementación](https://docs.google.com/document/d/1FpzyCIM-Ffxy0TUeZKUqMZBnRZVgEctM1v-CgyLWdMI/edit?usp=sharing)
 
 # Referencias y Recursos

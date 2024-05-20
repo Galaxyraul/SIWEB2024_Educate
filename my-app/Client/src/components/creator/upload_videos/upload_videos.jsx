@@ -26,7 +26,7 @@ const VideoUploadModule = ({lectureId}) => {
       console.error('Error:', error);
     });
     
-    
+    alert('Los videos se han subido');
   };
   const handleEdit = (index) => {
     const video = videos_cards[index];

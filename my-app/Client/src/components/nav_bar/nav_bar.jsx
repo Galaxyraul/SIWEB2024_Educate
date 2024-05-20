@@ -44,7 +44,7 @@ const NavBar = ({user}) => {
     const handleMouseLeave = () => {
         timeoutRef.current = setTimeout(() => {
             setShowCategories(false);
-        }, 300); // 300 milliseconds delay before hiding
+        }, 300);
     };
 
     const handleCategoriesMouseEnter = () => {
@@ -111,7 +111,11 @@ const NavBar = ({user}) => {
                         <Slider />
                         <LanguageDropdown />
                         {user.logged ? (
-                            <h2 id="profile" onClick={openModal}>{user.username}</h2>
+                            <div>
+                                <h2 id="profile" onClick={openModal}>{user.username}</h2>
+                                <h3 id = "role">{user.role}</h3>
+                            </div>
+                            
                         ) : (
                             <h2 id="login" onClick={openModal}>Acceder</h2>
                         )}

@@ -13,13 +13,13 @@ const upload = multer({ storage: storage });
 
 module.exports = function(app, db) {
     app.get('/lectures', async (req, res) => {
-        const [lectures] = await db.promise().query('SELECT * FROM lectures');
+        const [lectures] = await db.promise().query('SELECT * FROM lectures').catch(err => { return []; });
         res.json(lectures);
     });
 
     app.get('/lectures/:category', async (req, res) => {
         const { category } = req.params;
-        const [subcategories] = await db.promise().query('SELECT name, description FROM lectures INNER JOIN categories_lectures ON lectures.name = categories_lectures.lecture_name WHERE categories_lectures.category_name = ?', [category]);
+        const [subcategories] = await db.promise().query('SELECT name, description FROM lectures INNER JOIN categories_lectures ON lectures.name = categories_lectures.lecture_name WHERE categories_lectures.category_name = ?', [category]).catch(err => { return []; });
         res.json(subcategories);
     });
 
@@ -28,44 +28,33 @@ module.exports = function(app, db) {
     });
 
     app.post('/lectures/insert', (req, res) => {
-        const { title, description, tags,creator,fileName } = req.body;
-        const filePath = `lectures/${fileName.replace(/[^a-zA-Z0-9-_.]/g, '')}`;
-        console.log(filePath);
-        const query = 'INSERT INTO lectures (name, creator, description, path) VALUES (?, ?, ?, ?)'
-        db.query(query, [title, creator, description, filePath], (err, result) => {
-            if (err) {
-                console.error(err);
-                res.status(300).send(err);
-            } else {
-                const lectureId = result.insertId;
-                tags.forEach(tag => {
-                    const query = `
-                    INSERT INTO categories_lectures (category_name, lecture_name)
-                    VALUES (?, ?)
-                    `;
-                    db.query(query, [tag, title], (err, result) => {
-                    if (err) {
-                        console.error(err);
-                        res.status(500).send(err);
-                    }
-                    });
-                });
-                res.json({ message: 'Lecture successfully stored', id: lectureId });
-            }
+    const { title, description, tags, creator, fileName } = req.body;
+    const filePath = `lectures/${fileName.replace(/[^a-zA-Z0-9-_.]/g, '')}`;
+    const query = 'INSERT INTO lectures (name, creator, description, path) VALUES (?, ?, ?, ?)';
+    db.query(query, [title, creator, description, filePath], (err, result) => {
+        if (err) {
+            return res.status(500).send(err);
+        }
+        const lectureId = result.insertId;
+        tags.forEach(tag => {
+            const query = 'INSERT INTO categories_lectures (category_name, lecture_name) VALUES (?, ?)';
+            db.query(query, [tag, title], (err, result) => {
+                if (err) {
+                    return res.status(500).send(err);
+                }
+            });
         });
-        
+        res.json({ message: 'Lecture successfully stored', id: lectureId });
     });
+});
 
     app.get('/pending',async (req, res) => {
-        const [lectures] = await db.promise().query('SELECT * FROM lectures WHERE status = "pending"');
+        const [lectures] = await db.promise().query('SELECT * FROM lectures WHERE status = "pending"').catch(err => { return []; });
         res.json(lectures);
     });
 
     app.post('/videoShow',(req,res)=>{
         const {lectureId,videos} = req.body;
-        videos.forEach(video =>{
-            console.log(video);
-        });
         res.json({message: 'Videos successfully stored'});
     });
     
@@ -78,7 +67,6 @@ module.exports = function(app, db) {
                 VALUES (?, ?, ?)`;
             db.query(query, [title, description, url], (err, result) => {
                 if (err) {
-                    console.error(err);
                     res.status(500).send(err);
                 } else {
                     const query2 = `
@@ -87,13 +75,13 @@ module.exports = function(app, db) {
                     `;
                     db.query(query2, [lectureId, url], (err2, result2) => {
                         if (err2) {
-                            console.error(err2);
+                            
                             res.status(500).send(err2);
                         }
-                    });
+                    }).catch(err => { return []; });
                 }
             });
-        });
+        }).catch(err => { return []; });
         res.json({ message: 'Videos successfully stored' });
     });
 
@@ -108,18 +96,16 @@ module.exports = function(app, db) {
 
         db.query(query, [status,reviewer, name], (error, results) => {
             if (error) {
-            console.error(error);
             res.status(500).json({ error: 'Internal Server Error' });
             } else {
             res.status(200).json({ message: 'Lecture status and reviewer updated successfully' });
             }
-        });
+        }).catch(err => { return []; });
     });
 
     app.get('/lecture_get/:lectureName', async (req, res) => {
         const { lectureName } = req.params;
-        const [lectures] = await db.promise().query('SELECT * FROM lectures WHERE name = ?', [lectureName]);
-        console.log("lectures:", lectures);
+        const [lectures] = await db.promise().query('SELECT * FROM lectures WHERE name = ?', [lectureName]).catch(err => { return []; });
         res.json(lectures);
     });
 
@@ -131,13 +117,12 @@ module.exports = function(app, db) {
             JOIN video_lecture vl ON v.url = vl.video_url
             WHERE vl.lecture_name = ?
         `;
-        const [videos] = await db.promise().query(query, [lectureName]);
+        const [videos] = await db.promise().query(query, [lectureName]).catch(err => { return []; });
         res.json(videos);
     });
 
     app.post('/accept', async (req, res) => {
         const { mail,user } = req.body;
-        console.log(mail,user)
         const query = `
             UPDATE lectures
             SET status = 'accepted',  reviewer = ?
@@ -145,14 +130,12 @@ module.exports = function(app, db) {
         `;
         db.query(query, [user,mail], (err, result) => {
             if (err) {
-                console.error(err);
                 res.status(500).send(err);
             }
-        });
+        }).catch(err => { return []; });
     });
     app.post('/refuse', async (req, res) => {
         const { mail,user } = req.body;
-        console.log(mail,user)
         const query = `
             UPDATE lectures
             SET status = 'refused',  reviewer = ?
@@ -160,10 +143,9 @@ module.exports = function(app, db) {
         `;
         db.query(query, [user,mail], (err, result) => {
             if (err) {
-                console.error(err);
                 res.status(500).send(err);
             }
-        });
+        }).catch(err => { return []; });
     });
 
     app.get('/lectures_get_categories/:lectureName', async (req, res) => {
@@ -174,7 +156,7 @@ module.exports = function(app, db) {
         JOIN categories_lectures lc ON c.name = lc.category_name
         WHERE lc.lecture_name = ?
     `;
-    const [categories] = await db.promise().query(query, [lectureName]);
+    const [categories] = await db.promise().query(query, [lectureName]).catch(err => { return []; });
     res.json(categories);
 });
 }

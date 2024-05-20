@@ -43,6 +43,7 @@ app.get('/tables', (req, res) => {
       res.status(500).send('Server error');
     });
 });
+
 app.get('/categories', (req, res) => {
   db.promise().query('SELECT name FROM categories')
     .then(([rows, fields]) => {

@@ -1,4 +1,8 @@
-
+@keyframes breathe {
+    0%   { background-color: #ff0000; }
+    50%  { background-color: #00ff00; }
+    100% { background-color: #0000ff; }
+}
 
 #chat_container{
     display: flex;
@@ -73,7 +77,9 @@
     font-size: 1em;
     font-weight: bold;
     cursor: pointer;
+    animation: breathe 5s infinite;
 }
+
 
 .chat_bar_button{
     background-color: red;

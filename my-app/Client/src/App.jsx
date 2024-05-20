@@ -14,6 +14,7 @@ function App() {
         logged: false,
         balance:0,
         mail:"prueba@gmail.com",
+        role:"creator",
         addBalance: function(amount) {
             setUser(prevUser => ({
                 ...prevUser,
@@ -26,7 +27,7 @@ function App() {
                 balance: prevUser.balance - amount,
             }));
         },
-        login: function(name,mail,balance) {
+        login: function(name,mail,role,balance) {
             setUser({
                 logged: true,
                 username: name,
@@ -36,6 +37,7 @@ function App() {
                 logout: this.logout,
                 addBalance: this.addBalance,
                 reduceBalance: this.reduceBalance,
+                role: role
             });
         },
         logout: function() {
@@ -43,6 +45,7 @@ function App() {
                 logged: false,
                 username: '',
                 mail: '',
+                role: '',
                 balance: 0,
                 login: this.login,
                 logout: this.logout,
@@ -60,6 +63,7 @@ function App() {
                 logout: this.logout,
                 addBalance: this.addBalance,
                 reduceBalance: this.reduceBalance,
+                role: "creator"
             });
         },
         username: 'John Doe'

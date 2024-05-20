@@ -37,7 +37,7 @@ const LoginRegister = ({ user, closeModal }) => {
                 setErrorMessage('Credenciales inválidas');
                 setActiveTab('error');
             } else{
-                user.login(data.user.nick,data.user.mail,data.user.coins);
+                user.login(data.user.nick,data.user.mail,data.user.role,data.user.coins);
                 closeModal();
                 navigate('/home');
             }

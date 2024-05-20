@@ -56,6 +56,7 @@ const FileUploadModule = ({userId,lectureId,setLectureId}) => {
       setFile(null);
       setDocName('');
     });
+    alert('El archivo se ha subido');
   };
   const handleAdd = () => {
     if (!file || !title || !description || !tags) {
