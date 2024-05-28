@@ -1,2 +1,4 @@
+docker pull mysql/mysql-server:latest
 docker run --name=mysqlserver1 -d -p 3316:3306 -e MYSQL_ROOT_PASSWORD=root -it --net=clusternet -v db-data1:/var/lib/mysql mysql/mysql-server
+docker run --name=mysqlserver2 -d -p 3317:3306 -e MYSQL_ROOT_PASSWORD=root -it --net=clusternet -v db-data2:/var/lib/mysql mysql/mysql-server
 docker run --name=mysqlserver2 -d -p 3317:3306 -e MYSQL_ROOT_PASSWORD=root -it --net=clusternet -v db-data2:/var/lib/mysql mysql/mysql-server

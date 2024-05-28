@@ -8,10 +8,10 @@ module.exports = function(app, db) {
 
         const query = `
         INSERT INTO users (nick, role, mail, password)
-        VALUES (?, 'reader', ?, ?)
+        VALUES (?, ?, ?, ?)
         `;
 
-        db.query(query, [nick, mail, hashedPassword], (error, results) => {
+        db.query(query, [nick,1, mail, hashedPassword], (error, results) => {
             if (error) {
                 console.error(error);
                 res.status(500).json({ error: 'Internal Server Error' });

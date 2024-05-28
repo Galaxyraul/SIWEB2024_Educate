@@ -18,7 +18,7 @@ const user = require('./scripts/user');
 
 const db = mysql.createPool({
   host: '127.0.0.1',
-  port: 3316,
+  port: 3319,
   user: 'bdd',
   password: 'bdd',
   database: 'bdd',

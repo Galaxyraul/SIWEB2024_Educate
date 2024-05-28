@@ -10,6 +10,11 @@ import Documents_page from './components/documents/documents_page';
 import Documents_content_page from './components/document_content/document_content_page';
 import Home from './components/home/home';
 function App() {
+    const roleMap = {
+        1: 'reader',
+        2: 'creator',
+        3: 'reviewer'
+    };
     const [user, setUser] = useState({
         logged: false,
         balance:0,
@@ -37,7 +42,7 @@ function App() {
                 logout: this.logout,
                 addBalance: this.addBalance,
                 reduceBalance: this.reduceBalance,
-                role: role
+                role: roleMap[role]
             });
         },
         logout: function() {

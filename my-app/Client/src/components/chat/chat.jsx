@@ -20,10 +20,12 @@ const ChatContainer = ({user}) => {
     const sendMessage = () => {
     if (!user.logged) {
         setInputValue('Tienes que haber iniciado sesión');
+        alert("Tienes que hacer iniciado sesión para usar el chat");
         return;
     }
     if (user.balance < 10) {
         setInputValue('No tienes suficiente saldo');
+        alert("No dispones de fondos sufcientes para usar este elemento porfavor compre monedas");
         return;
     }
     if (inputValue) {

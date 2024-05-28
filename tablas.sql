@@ -27,17 +27,17 @@ CREATE TABLE subscription_types (
 CREATE TABLE categories (
     name VARCHAR(255) PRIMARY KEY,
     description TEXT,
-    parent_category VARCHAR(255),
-    FOREIGN KEY (parent_category) REFERENCES categories(name)
+    parent_category VARCHAR(255)
 );
 CREATE TABLE users (
     nick VARCHAR(255),
-    role VARCHAR(255) NOT NULL CHECK (role IN ('reader', 'creator','reviewer')),
+    role INT NOT NULL,
     mail VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
     coins INT DEFAULT 0,
-    PRIMARY KEY (nick)
-);
+    PRIMARY KEY (nick,role)
+)
+PARTITION BY HASH (role) PARTITIONS 3;
 
 
 CREATE TABLE purchases (
@@ -45,9 +45,7 @@ CREATE TABLE purchases (
     user_nick VARCHAR(255),
     coin_pack_name VARCHAR(255),
     purchase_date DATE NOT NULL,
-    PRIMARY KEY (id,user_nick),
-    FOREIGN KEY (user_nick) REFERENCES users(nick),
-    FOREIGN KEY (coin_pack_name) REFERENCES coins_pack(name)
+    PRIMARY KEY (id,user_nick)
 );
 
 CREATE TABLE subscriptions (
@@ -56,38 +54,31 @@ CREATE TABLE subscriptions (
     subscription_name VARCHAR(255),
     start_date DATE,
     expiration_date DATE,
-    PRIMARY KEY (id,user_nick),
-    FOREIGN KEY (user_nick) REFERENCES users(nick),
-    FOREIGN KEY (subscription_name) REFERENCES subscription_types(name)
+    PRIMARY KEY (id,user_nick)
 );
 
 CREATE TABLE lectures (
-    status ENUM('pending', 'accepted', 'refused') NOT NULL,
+    status INT NOT NULL,
     name VARCHAR(255) NOT NULL,
     reviewer VARCHAR(255),
     creator VARCHAR(255) NOT NULL,
     description TEXT,
     path VARCHAR(255) NOT NULL,
-    PRIMARY KEY (name),
-    FOREIGN KEY (reviewer) REFERENCES users(nick),
-    FOREIGN KEY (creator) REFERENCES users(nick)
-);
+    PRIMARY KEY (name,status)
+)
+PARTITION BY HASH (status) PARTITIONS 3;
 
 CREATE TABLE readers_lectures (
     user_nick VARCHAR(255),
     lecture_name VARCHAR(255),
     last_access TIMESTAMP,
-    PRIMARY KEY (user_nick, lecture_name),
-    FOREIGN KEY (user_nick) REFERENCES users(nick),
-    FOREIGN KEY (lecture_name) REFERENCES lectures(name)
+    PRIMARY KEY (user_nick, lecture_name)
 );
 
 CREATE TABLE categories_lectures (
     category_name VARCHAR(255),
     lecture_name VARCHAR(255),
-    PRIMARY KEY (category_name, lecture_name),
-    FOREIGN KEY (category_name) REFERENCES categories(name),
-    FOREIGN KEY (lecture_name) REFERENCES lectures(name)
+    PRIMARY KEY (category_name, lecture_name)
 );
 
 CREATE TABLE videos (
@@ -100,7 +91,5 @@ CREATE TABLE videos (
 CREATE TABLE video_lecture (
     video_url VARCHAR(255),
     lecture_name VARCHAR(255),
-    PRIMARY KEY (video_url, lecture_name),
-    FOREIGN KEY (video_url) REFERENCES videos(url),
-    FOREIGN KEY (lecture_name) REFERENCES lectures(name)
+    PRIMARY KEY (video_url, lecture_name)
 );

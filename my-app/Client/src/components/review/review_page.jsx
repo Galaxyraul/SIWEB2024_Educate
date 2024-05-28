@@ -27,9 +27,15 @@ const ReviewPage = ({user}) => {
 
     return (
         <div className="review-flex">
+        {!user.logged || user.role !== 'reviewer' ? (
+            <p className='ERROR-MESSAGE'>Tienes que haber iniciado sesión como revisor para acceder aquí</p>
+        ) : (
+            <>
             <Mailbox user = {user} mails={mails} onSelectMail={handleSelectMail} selectedMail={selectedMail} onRemoveMail={onRemoveMail} />
             <ReviewDocument selectedMail={selectedMail} removeMail={onRemoveMail} />
             <Ad />
+            </>
+        )};
         </div>
     );
 };

@@ -18,13 +18,20 @@ const Create = ({ user }) => {
   };
   return (
     <div className="create-container">
-      <h1>&#8203;</h1>
-      <div className="tab-buttons">
-        <button className={key === 'files' ? 'selected-button' : ''} onClick={() => setKey('files')}>Files</button>
-        <button className={key === 'videos' ? 'selected-button' : ''} onClick={() => setKey('videos')}>Videos</button></div>
-      <div className="tab-content">
-        {renderContent()}
-      </div>
+      {!user.logged || user.role !== 'creator' ? (
+        <p className='ERROR-MESSAGE'>Tienes que haber iniciado sesión como creador para acceder aquí</p>
+      ) : (
+        <>
+          <h1>&#8203;</h1>
+          <div className="tab-buttons">
+            <button className={key === 'files' ? 'selected-button' : ''} onClick={() => setKey('files')}>Files</button>
+            <button className={key === 'videos' ? 'selected-button' : ''} onClick={() => setKey('videos')}>Videos</button>
+          </div>
+          <div className="tab-content">
+            {renderContent()}
+          </div>
+        </>
+      )}
     </div>
   );
 };

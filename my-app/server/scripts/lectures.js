@@ -49,7 +49,7 @@ module.exports = function(app, db) {
 });
 
     app.get('/pending',async (req, res) => {
-        const [lectures] = await db.promise().query('SELECT * FROM lectures WHERE status = "pending"').catch(err => { return []; });
+        const [lectures] = await db.promise().query('SELECT * FROM lectures WHERE status = 3').catch(err => { return []; });
         res.json(lectures);
     });
 

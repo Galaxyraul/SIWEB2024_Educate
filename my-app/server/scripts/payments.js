@@ -39,7 +39,7 @@ module.exports = function(app, db) {
       } else {
         res.status(201).json({ message: 'Purchase recorded successfully', id: results.insertId });
       }
-    }).catch(err => { return []; });
+    });
   });
 
   app.post('/subscriptions/insert', (req, res) => {
@@ -57,7 +57,7 @@ module.exports = function(app, db) {
       } else {
         res.status(201).json({ message: 'Subscription recorded successfully', id: results.insertId });
       }
-    }).catch(err => { return []; });
+    });
   });
   
 }
