@@ -30,7 +30,7 @@ const FileUploadModule = ({userId,lectureId,setLectureId}) => {
       tags: tags,
       fileName: name
     })
-      fetch('http://localhost:5000/lectures/insert', { 
+      fetch('https://d118flx1-5000.uks1.devtunnels.ms/lectures/insert', { 
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -46,7 +46,7 @@ const FileUploadModule = ({userId,lectureId,setLectureId}) => {
     const fileData = new FormData();
     fileData.append('file', file);
 
-    fetch('http://localhost:5000/lectures/upload', { 
+    fetch('https://d118flx1-5000.uks1.devtunnels.ms/lectures/upload', { 
       method: 'POST',
       body: fileData,
     })

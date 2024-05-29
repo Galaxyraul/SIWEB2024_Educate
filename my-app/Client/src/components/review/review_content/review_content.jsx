@@ -9,14 +9,14 @@ const ReviewDocument = ({ selectedMail }) => {
     const [htmlContent, setHtmlContent] = useState('');
     useEffect(() => {
         if (selectedMail && selectedMail.path) {
-            fetch(`http://localhost:5000/resources/${selectedMail.path}`)
+            fetch(`https://d118flx1-5000.uks1.devtunnels.ms/resources/${selectedMail.path}`)
                 .then(response => response.text())
                 .then(data => setHtmlContent(data));
         }
     }, [selectedMail]);
     useEffect(() => {
         if (selectedMail) {
-            fetch(`http://localhost:5000/videos/${selectedMail.name}`)
+            fetch(`https://d118flx1-5000.uks1.devtunnels.ms/videos/${selectedMail.name}`)
                 .then(response => response.json())
                 .then(data => setVideos(data));
         }

@@ -6,7 +6,7 @@ const TagSelector = ({ selectedTags, onTagSelect }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [tags, setTags] = useState([]); 
   useEffect(() => {
-    fetch('http://localhost:5000/categories')
+    fetch('https://d118flx1-5000.uks1.devtunnels.ms/categories')
       .then(response => response.json())
       .then(data => {
         const tagNames = data.map(tag => tag.name);

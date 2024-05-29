@@ -9,12 +9,12 @@ const PaymentsPage = ({ user }) => {
     const [coins, setCoins] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/subscription_types')
+        fetch('https://d118flx1-5000.uks1.devtunnels.ms/subscription_types')
         .then(response => response.json())
         .then(data => {setSubscriptions(data);})
         .catch(error => console.error('Error:', error));
 
-        fetch('http://localhost:5000/coins_pack')
+        fetch('https://d118flx1-5000.uks1.devtunnels.ms/coins_pack')
         .then(response => response.json())
         .then(data => {setCoins(data);})
         .catch(error => console.error('Error:', error));

@@ -55,7 +55,9 @@ Todos tienen como contraseña 1234
 
 Para acceder al sitio web se puede realizar mediante el siguiente enlace: [Educate](https://d118flx1-5173.uks1.devtunnels.ms)
 
-En este repositorio se dispone de un archivo de prueba Areas.html, si desea subir otros archivos tenga en cuenta que han de ser formato html
+En este repositorio se dispone de un archivo de prueba Areas.html, si desea subir otros archivos tenga en cuenta que han de ser formato html.
+
+A la hora del contenido solo disponemos del elemento ecuaciones como muestra que se encuentra dentro de matemáticas
 # Conclusión
 La creación de la plataforma Educate ha sido un proyecto multidimensional que ha demostrado la importancia de una arquitectura de la información bien diseñada. A través de una investigación exhaustiva, una planificación meticulosa y un diseño centrado en el usuario, se ha logrado desarrollar un sitio web que no solo cumple con los requisitos técnicos y funcionales, sino que también ofrece una experiencia de usuario superior.
 

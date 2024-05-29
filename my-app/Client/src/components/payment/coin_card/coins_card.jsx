@@ -19,7 +19,7 @@ class CoinCard extends Component {
         return (
             <div className="coin-card">
                 <h2>{coin.name}</h2>
-                <img src={"http://localhost:5000/resources/" + coin.image_path} alt="Coin" />
+                <img src={"https://d118flx1-5000.uks1.devtunnels.ms/resources/" + coin.image_path} alt="Coin" />
                 <p>Cantidad: {coin.quantity}</p>
                 <p>Precio: {coin.price}€</p>
                 <PaymentOptionsModal 

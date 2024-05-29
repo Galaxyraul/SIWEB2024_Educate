@@ -8,7 +8,7 @@ const Categories_page = ({ user }) =>{
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/categories_tree')
+        fetch('https://d118flx1-5000.uks1.devtunnels.ms/categories_tree')
             .then(response => response.json())
             .then(data => {
                 setCategories(data);

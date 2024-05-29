@@ -35,7 +35,7 @@ const UserProfile = ({ user, closeModal }) => {
             requestBody.password = password;
         }
 
-        fetch('http://localhost:5000/editUser', {
+        fetch('https://d118flx1-5000.uks1.devtunnels.ms/editUser', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

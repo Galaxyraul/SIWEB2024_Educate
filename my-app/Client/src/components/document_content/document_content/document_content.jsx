@@ -9,7 +9,7 @@ const ReviewDocument = ({ document }) => {
 
     useEffect(() => {
         if (document && document[0].path) {
-            fetch(`http://localhost:5000/resources/${document[0].path}`)
+            fetch(`https://d118flx1-5000.uks1.devtunnels.ms/resources/${document[0].path}`)
                 .then(response => response.text())
                 .then(data => setHtmlContent(data));
         }
@@ -17,7 +17,7 @@ const ReviewDocument = ({ document }) => {
     console.log("document",document);   
     useEffect(() => {
         if (document) {
-            fetch(`http://localhost:5000/videos/${document[0].name}`)
+            fetch(`https://d118flx1-5000.uks1.devtunnels.ms/videos/${document[0].name}`)
                 .then(response => response.json())
                 .then(data => {setVideos(data);console.log("data",data)});
         }

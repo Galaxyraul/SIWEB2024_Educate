@@ -3,7 +3,7 @@ import './mailbox.css';
 
 const Mailbox = ({ user, mails, onSelectMail, selectedMail,onRemoveMail}) => {
     const handleAccept = (mail) => {
-        fetch(`http://localhost:5000/accept`, {
+        fetch(`https://d118flx1-5000.uks1.devtunnels.ms/accept`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -17,7 +17,7 @@ const Mailbox = ({ user, mails, onSelectMail, selectedMail,onRemoveMail}) => {
         alert('Archivo aceptado!');
     };
     const handleRefuse = (mail) => {
-        fetch(`http://localhost:5000/refuse`, {
+        fetch(`https://d118flx1-5000.uks1.devtunnels.ms/refuse`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

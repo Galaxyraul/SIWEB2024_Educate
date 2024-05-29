@@ -8,11 +8,11 @@ const Home = ({user}) => {
     const [docs, setDocs] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/categories')
+        fetch('https://d118flx1-5000.uks1.devtunnels.ms/categories')
             .then(response => response.json())
             .then(data => setCategories(data));
 
-        fetch('http://localhost:5000/lectures')
+        fetch('https://d118flx1-5000.uks1.devtunnels.ms/lectures')
             .then(response => response.json())
             .then(data => setDocs(data));
     }, []);

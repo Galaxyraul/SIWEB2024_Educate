@@ -9,7 +9,7 @@ const VideoUploadModule = ({lectureId}) => {
   const [videos_cards, setVideosCards] = useState([]);
   
   const handleSubmit = () => {
-    fetch('http://localhost:5000/videosAdd', {
+    fetch('https://d118flx1-5000.uks1.devtunnels.ms/videosAdd', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

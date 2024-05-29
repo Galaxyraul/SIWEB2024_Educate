@@ -18,7 +18,7 @@ const LoginRegister = ({ user, closeModal }) => {
         }
     
         console.log(username, password);
-        fetch('http://localhost:5000/login', {
+        fetch('https://d118flx1-5000.uks1.devtunnels.ms/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ const LoginRegister = ({ user, closeModal }) => {
             setActiveTab('error');
             return;
         }
-        fetch('http://localhost:5000/register', {
+        fetch('https://d118flx1-5000.uks1.devtunnels.ms/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

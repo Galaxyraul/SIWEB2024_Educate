@@ -9,7 +9,7 @@ const Documents_page = ({ user }) => {
     const [documents, setDocuments] = useState([]);
     console.log(categoryId)
     useEffect(() => {
-        fetch(`http://localhost:5000/lectures/${categoryId}`)
+        fetch(`https://d118flx1-5000.uks1.devtunnels.ms/lectures/${categoryId}`)
             .then(response => response.json())
             .then(data => {setDocuments(data);console.log(data)})
             .catch(error => console.error('Error:', error));

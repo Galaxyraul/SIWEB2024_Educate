@@ -10,7 +10,7 @@ const Landing = ({ user }) => {
                 <ChatContainer user={user}/>
             </div>
             <div className = "presentation">
-            <img src="http://localhost:5000/resources/images/logo_educate.jpg" alt="logo" />
+            <img src="https://d118flx1-5000.uks1.devtunnels.ms/resources/images/logo_educate.jpg" alt="logo" />
             <h1>Educate: Tu lugar de Estudio</h1>
             <h2>Conecta, aprende y crece en Educate. Únete ahora para acceder a recursos educativos, compartir conocimientos y encontrar apoyo en tu viaje de aprendizaje.</h2>
             </div>

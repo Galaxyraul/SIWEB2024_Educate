@@ -4,7 +4,7 @@ import './chat.css';
 const ChatContainer = ({user}) => {
     const [displayed, setDisplayed] = useState(false);
     const [messages, setMessages] = useState([
-        { type: 'bot', content: "Bienvenido a nuestro chat", img: 'http://localhost:5000/resources/images/logo_educate.jpg' }
+        { type: 'bot', content: "Bienvenido a nuestro chat", img: 'https://d118flx1-5000.uks1.devtunnels.ms/resources/images/logo_educate.jpg' }
     ]);
     const [inputValue, setInputValue] = useState('');
 
@@ -32,11 +32,11 @@ const ChatContainer = ({user}) => {
         user.reduceBalance(10);
         setMessages(prevMessages => [
             ...prevMessages,
-            { type: 'user', content: inputValue, img: 'http://localhost:5000/resources/images/user.png' },
+            { type: 'user', content: inputValue, img: 'https://d118flx1-5000.uks1.devtunnels.ms/resources/images/user.png' },
             { type: 'bot', content: <div>Para resolver una ecuación lo primero es saber de que tipo es.<br/>
                 Suponiendo que nos enfrentemos a una ecuación de 2º grado recomiendo aplicar la fórmula:<br/>
                 -b±√(b²-4ac)/2a<br/>
-                Para más información visita <a href="/documents/Matematicas/Ecuaciones">Ecuaciones</a></div>, img: 'http://localhost:5000/resources/images/logo_educate.jpg' }
+                Para más información visita <a href="/documents/Matematicas/Ecuaciones">Ecuaciones</a></div>, img: 'https://d118flx1-5000.uks1.devtunnels.ms/resources/images/logo_educate.jpg' }
         ]);
         setInputValue('');
     }

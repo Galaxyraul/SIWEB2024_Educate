@@ -13,7 +13,7 @@ const NavBar = ({user}) => {
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/categories_tree')
+        fetch('https://d118flx1-5000.uks1.devtunnels.ms/categories_tree')
             .then(response => response.json())
             .then(data => {
                 setCategories(data);
@@ -93,7 +93,7 @@ const NavBar = ({user}) => {
                 />
                 <nav id="nav_bar">
                     <ul className="left">
-                        <li><Link to={user.logged ? "/home":"/landing"}> <img src="http://localhost:5000/resources/images/logo_educate.jpg" alt="logo" /></Link></li>
+                        <li><Link to={user.logged ? "/home":"/landing"}> <img src="https://d118flx1-5000.uks1.devtunnels.ms/resources/images/logo_educate.jpg" alt="logo" /></Link></li>
                         <li>
                             <Link to="/categories" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Areas de conocimiento</Link>  
                         </li>
@@ -107,7 +107,7 @@ const NavBar = ({user}) => {
                     </ul>
                     <SearchBar />
                     <ul className = "right">
-                    <Link to="/payments"><div className='balance'>{user.balance}<img className = "coins" src = "http://localhost:5000/resources/images/coins_logo.png" alt = "coins"></img></div></Link>
+                    <Link to="/payments"><div className='balance'>{user.balance}<img className = "coins" src = "https://d118flx1-5000.uks1.devtunnels.ms/resources/images/coins_logo.png" alt = "coins"></img></div></Link>
                         <Slider />
                         <LanguageDropdown />
                         {user.logged ? (

@@ -8,7 +8,7 @@ const SearchBar = () => {
     const searchRef = useRef();
     const navigate = useNavigate();
     useEffect(() => {
-        fetch('http://localhost:5000/lectures')
+        fetch('https://d118flx1-5000.uks1.devtunnels.ms/lectures')
             .then(response => response.json())
             .then(data => setLectures(data));
 
@@ -30,7 +30,7 @@ const SearchBar = () => {
 
     const handleItemClick = (lecture) => {
         console.log(lecture);
-        fetch(`http://localhost:5000/lectures_get_categories/${lecture.name}`) 
+        fetch(`https://d118flx1-5000.uks1.devtunnels.ms/lectures_get_categories/${lecture.name}`) 
             .then(response => response.json())
             .then(categories => {
                 console.log(categories)

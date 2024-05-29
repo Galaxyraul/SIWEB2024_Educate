@@ -4,7 +4,7 @@ import './ads.css';
 const VerticalAd = () => {
   return (
     <div className="vertical-ad">
-      <img src="http://localhost:5000/resources/images/ad.png" alt="Ad" />
+      <img src="https://d118flx1-5000.uks1.devtunnels.ms/resources/images/ad.png" alt="Ad" />
     </div>
   );
 };

@@ -8,7 +8,7 @@ const ReviewPage = ({user}) => {
     const [mails, setMails] = useState([]);
 
     useEffect(() => {
-    fetch('http://localhost:5000/pending')
+    fetch('https://d118flx1-5000.uks1.devtunnels.ms/pending')
         .then(response => response.json())
         .then(data => {setMails(data);console.log(data);})
         .catch(error => console.error('Error:', error));
